@@ -2,12 +2,16 @@ package com.aigestudio.wheelpicker.demo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aigestudio.wheelpicker.WheelPicker;
-import com.aigestudio.wheelpicker.WheelPickerLeft;
+
+import java.util.Timer;
+import java.util.TimerTask;
 //import com.aigestudio.wheelpicker.WheelPickerRight;
 
 /**
@@ -22,7 +26,9 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
     private Button getValueButton;
     private Button resultButton;
+    private Button showLegendButton;
     private Integer getValueButtonItemIndex;
+    private TextView t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,22 +45,50 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //        getValueButton.setOnClickListener(this);
 //        getValueButton.setText("Selected Value is");
 
+
+
+
         getValueButton = (Button) findViewById(R.id.get_value_btn);
         resultButton = (Button) findViewById(R.id.result_btn);
+        showLegendButton = (Button) findViewById(R.id.show_legend_btn);
+        showLegendButton.setOnClickListener(this);
         getValueButton.setOnClickListener(this);
         getValueButton.setText("Check Answer");
         resultButton.setVisibility(View.INVISIBLE);
 
+        t = (TextView) findViewById(R.id.Cardiovascular);
+//
+        t.setVisibility(View.INVISIBLE);
+        t.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
+                                      "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#EE0000\">" + "Endocrine   " + "</font>" +  "<br>" +
+                                      "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
+                                      "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
 
+
+    }
+
+    private void showLegendButton() {
+        new Thread(new Runnable(){
+            public void run(){
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                t.setVisibility(View.VISIBLE);
+            }
+        }).run();
+
+            //t.setVisibility(View.INVISIBLE);
     }
 
     private void getSpinnerValue() {
         getValueButtonItemIndex = (int) (Math.random() * wheelCenter.getData().size());
-
     }
     int counter = 0;
     @Override
     public void onItemSelected(WheelPicker picker, Object data, int position) {
+        resultButton.setVisibility(View.INVISIBLE);
         String text = "";
         switch (picker.getId()) {
             case R.id.main_wheel_left:
@@ -76,21 +110,70 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     }
 
     @Override
-    public void onClick(View v) {
-        counter++;
-        String text = "Third Try! (Display Hint Here)";
-        if (counter == 3){
-            Toast.makeText(this, text , Toast.LENGTH_SHORT).show();
-            counter = 0;
-        }
-        Integer temp = wheelCenter.getCurrentItemPosition();
-        getSpinnerValue();
-        resultButton = (Button) findViewById(R.id.result_btn);
-        getSpinnerValue();
-        resultButton.setOnClickListener(this);
-        resultButton.setText("Selected Values are " + wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()) + " , " + wheelCenter.getData().get(temp)
-                + " , " + wheelRight.getData().get(wheelRight.getCurrentItemPosition()));
-        resultButton.setVisibility(View.VISIBLE);
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.get_value_btn:
+                counter++;
+                String text = "Third Try! (Display Hint Here)";
+                if (counter == 3){
+//            View view;
+//            TextView text1;
+//            Toast toast;
+//            toast.makeText(this, resId, Toast.LENGTH_SHORT);
+//            view = toast.getView();
+//            text1 = (TextView) view.findViewById(android.R.id.message);
+//            text1.setTextColor(getResources().getColor(R.color.black));
+//            text1.setShadowLayer(0,0,0,0);
+//            view.setBackgroundResource(R.color.white);
+//            toast.show();
+//            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+//            Toast.makeText(this, text , Toast.LENGTH_SHORT).show();
+                    counter = 0;
+                }
+                Integer temp = wheelCenter.getCurrentItemPosition();
+                getSpinnerValue();
+                resultButton = (Button) findViewById(R.id.result_btn);
+                getSpinnerValue();
+                resultButton.setOnClickListener(this);
+                resultButton.setText("Selected Values are " + wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()) + " , " + wheelCenter.getData().get(temp)
+                        + " , " + wheelRight.getData().get(wheelRight.getCurrentItemPosition()));
+                resultButton.setVisibility(View.VISIBLE);
+                break;
 
+            case R.id.result_btn:
+                //DO something
+                break;
+
+
+            case R.id.show_legend_btn:
+                String showLegend = "Show Legend";
+                String hideLegend = "Hide Legend";
+                String legendText = showLegendButton.getText().toString();
+
+
+                if (showLegend.equals(showLegendButton.getText())){
+                    t.setVisibility(View.VISIBLE);
+                    showLegendButton.setText("Hide Legend");
+                }
+                else if (hideLegend.equals(showLegendButton.getText())) {
+                    t.setVisibility(View.INVISIBLE);
+                    showLegendButton.setText("Show Legend");
+                }
+
+//                new Thread(new Runnable(){
+//                    public void run(){
+//                        try {
+//                            Thread.sleep(5000);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+//                        t.setVisibility(View.INVISIBLE);
+//                    }
+//                }).run();
+
+                    //showLegendButton();
+                    //t.setVisibility(View.INVISIBLE);
+                break;
+        }
     }
 }
