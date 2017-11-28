@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="WheelArrayGeneric">
+        <item>5FU</item>
+        <item>Abilify</item>
+        <item>Aciphex</item>
+        <item>Actos</item>
+        <item>Adderall</item>
+        <item>Advair</item>
+        <item>Aggrenox</item>
+        <item>Aldactone</item>
+        <item>Allegra</item>
+        <item>Aloprim, Zyloprim</item>
+        <item>Altace</item>
+        <item>Amaryl</item>
+        <item>Amatine</item>
+        <item>Ambien</item>
+        <item>Amoxil, Moxatag, Trimox</item>
+        <item>Antabuse</item>
+        <item>Antivert</item>
+        <item>Apresoline</item>
+        <item>Aralen</item>
+        <item>Aricept</item>
+        <item>Astelin</item>
+        <item>Atarax, Vistaril</item>
+        <item>Atarax</item>
+        <item>Ativan</item>
+        <item>Atripla</item>
+        <item>Augmentin</item>
+        <item>Avelox</item>
+        <item>Avodart</item>
+        <item>Azulfidine, Salazopyrin</item>
+        <item>Bactrim, Septra</item>
+        <item>Bactroban</item>
+        <item>Benadryl</item>
+        <item>Benicar</item>
+        <item>Betapace</item>
+        <item>Betoptic</item>
+        <item>Biaxin</item>
+        <item>Bumex</item>
+        <item>BuSpar</item>
+        <item>Byetta</item>
+        <item>Bystolic</item>
+        <item>Carafate</item>
+        <item>Cardizem, Cartia, Tiazac</item>
+        <item>Cardura</item>
+        <item>Catapre, Nexiclon</item>
+        <item>Catapres</item>
+        <item>Ceclor</item>
+        <item>Celebrex</item>
+        <item>Celexa</item>
+        <item>Chantix</item>
+        <item>Chlor-Trimeton</item>
+        <item>Cialis</item>
+        <item>Cipro</item>
+        <item>Clarinex</item>
+        <item>Claritin</item>
+        <item>Cleocin T</item>
+        <item>Cleocin</item>
+        <item>Cogentin</item>
+        <item>Colace, Socu-Soft, Dulcolax</item>
+        <item>Colcrys</item>
+        <item>Combivent, DuoNeb</item>
+        <item>Combivir</item>
+        <item>Compazine</item>
+        <item>Coreg</item>
+        <item>Coumadin, Jantoven</item>
+        <item>Cozaar</item>
+        <item>Crestor</item>
+        <item>Cymbalta</item>
+        <item>Cytovene</item>
+        <item>Daczone</item>
+        <item>Deltasone</item>
+        <item>Demadex</item>
+        <item>Demerol</item>
+        <item>Depakote</item>
+        <item>Dexilant</item>
+        <item>DexPak</item>
+        <item>Diflucan</item>
+        <item>Dilantin</item>
+        <item>Dilaudid, Exalgo</item>
+        <item>Diovan HCT</item>
+        <item>Diovan</item>
+        <item>Ditropan</item>
+        <item>Dramamine</item>
+        <item>DUAC</item>
+        <item>Dulcolax, Feen-a-Mint, Fleet</item>
+        <item>Dulera</item>
+        <item>Duragesic</item>
+        <item>Dyazide, Maxzide</item>
+        <item>Effexor</item>
+        <item>Elavil</item>
+        <item>EMLA</item>
+        <item>Emtriva</item>
+        <item>Enbrel</item>
+        <item>Enulose</item>
+        <item>Exelon</item>
+        <item>Famvir</item>
+        <item>Fioricet</item>
+        <item>Flagyl, Nidazol</item>
+        <item>Fleet enema, OsmoPrep</item>
+        <item>Flomax</item>
+        <item>Flonase</item>
+        <item>Flovent</item>
+        <item>Flumadine</item>
+        <item>Foscavir</item>
+        <item>Geodon</item>
+        <item>GlucaGen</item>
+        <item>Glucophage</item>
+        <item>Glucotrol</item>
+        <item>Glucovance</item>
+        <item>GoLYTELY, TriLyte, Klean-Prep</item>
+        <item>Haldol</item>
+        <item>Humalog</item>
+        <item>Humira</item>
+        <item>Hytrin</item>
+        <item>Hyzaar</item>
+        <item>Inderal</item>
+        <item>INH, Isotamine</item>
+        <item>Integrilin</item>
+        <item>Invirase</item>
+        <item>Isoptin, Calan, Verelan</item>
+        <item>Isopto Carpine</item>
+        <item>Janumet</item>
+        <item>Januvia</item>
+        <item>Jariance</item>
+        <item>Keflex</item>
+        <item>Kenalog</item>
+        <item>Keppra</item>
+        <item>Klonopin</item>
+        <item>Lamictal</item>
+        <item>Lamisil</item>
+        <item>Lanoxin, Digitek</item>
+        <item>Lantus</item>
+        <item>Lasix</item>
+        <item>Levaquin</item>
+        <item>Levemir</item>
+        <item>Lexapro</item>
+        <item>Lexiva, FPV</item>
+        <item>Lintron A</item>
+        <item>Lipitor</item>
+        <item>Lithonate, Lithotabs, Lithobid</item>
+        <item>Lomotil</item>
+        <item>Lopid</item>
+        <item>Lopressor</item>
+        <item>Lortab, Vicodin, Lorcet, Norco</item>
+        <item>Lotensin</item>
+        <item>Lotrel</item>
+        <item>Lotrisone</item>
+        <item>Lovaza</item>
+        <item>Lovenox</item>
+        <item>Lunesta</item>
+        <item>Lyrica</item>
+        <item>Macrodantin, Macrobid, Furadantin</item>
+        <item>Maxalt</item>
+        <item>Maxipime</item>
+        <item>Merrem</item>
+        <item>Mevacor</item>
+        <item>Micronase, DiaBeta</item>
+        <item>Microzide</item>
+        <item>Minocin, Solodyn</item>
+        <item>Mirapex</item>
+        <item>Mobic</item>
+        <item>Motrin</item>
+        <item>MS Contin</item>
+        <item>Mucinex, Robitussin</item>
+        <item>Mucomyst</item>
+        <item>Myambutol</item>
+        <item>Mysoline</item>
+        <item>Mysoline</item>
+        <item>Namenda</item>
+        <item>Naproxyn</item>
+        <item>Narcan, Evzio</item>
+        <item>Nasonex</item>
+        <item>Neurontin</item>
+        <item>Nexium</item>
+        <item>Niaspan</item>
+        <item>Nitro-BID</item>
+        <item>Nitro-dur, Transderm-Nitro</item>
+        <item>Nitrostat</item>
+        <item>Norvasc</item>
+        <item>Norvir, RTV</item>
+        <item>Novolog</item>
+        <item>Nu-Cromolyn</item>
+        <item>Nystop</item>
+        <item>Oleptro</item>
+        <item>Omnicef</item>
+        <item>Otrexup, Rheumatrex, MTX</item>
+        <item>OxyContin, Roxicodone</item>
+        <item>Pacerone, Cordarone, Nexterone</item>
+        <item>Patanol, Pataday</item>
+        <item>Paxil</item>
+        <item>Pegasys</item>
+        <item>Pentamycetin, Chloromycetin</item>
+        <item>Pepcid</item>
+        <item>Percocet, Oxycocet, Endocet</item>
+        <item>Percodan</item>
+        <item>Phenergan w/codeine</item>
+        <item>Phenergan</item>
+        <item>Plaquenil</item>
+        <item>Plavix</item>
+        <item>Porcardia, Nifedical XL, Adalat</item>
+        <item>Pravachol</item>
+        <item>Prevpac</item>
+        <item>Prilosec</item>
+        <item>Primaxin</item>
+        <item>Prinivil, Zestril</item>
+        <item>Pristiq</item>
+        <item>probalan</item>
+        <item>Proscar, Propecia</item>
+        <item>Protonix</item>
+        <item>Proventil HFA, Proair, Venolin HFA</item>
+        <item>Prozac</item>
+        <item>Pulmicort</item>
+        <item>Pyridium, Urogesic</item>
+        <item>QVAR</item>
+        <item>Reglan</item>
+        <item>Relenza</item>
+        <item>Remeron</item>
+        <item>Remicade</item>
+        <item>Requip</item>
+        <item>Retavase</item>
+        <item>Retin-A</item>
+        <item>Retrovir, AZT</item>
+        <item>Reyataz, ATV</item>
+        <item>Rifadin, Rofact</item>
+        <item>Rifater</item>
+        <item>Risperdal</item>
+        <item>Rocephin</item>
+        <item>Senokot, Ex-Lax</item>
+        <item>Serevent</item>
+        <item>Seroquel</item>
+        <item>Silvadene</item>
+        <item>Sinemet</item>
+        <item>Sinequan</item>
+        <item>Singulair</item>
+        <item>SoluMedrol, Medrol, Depo-Medrol</item>
+        <item>Sonata</item>
+        <item>Spiriva</item>
+        <item>Strattera</item>
+        <item>Streptase</item>
+        <item>Sudafed, Triaminic</item>
+        <item>Sustiva, EFV</item>
+        <item>Symbicort</item>
+        <item>Synthroid</item>
+        <item>Tagamet</item>
+        <item>Tamiflu</item>
+        <item>Tapazole</item>
+        <item>Tegretol, Carbatrol, Equetro</item>
+        <item>Tenormin</item>
+        <item>Tessalon</item>
+        <item>Topamax</item>
+        <item>Toprol XL</item>
+        <item>TPA, Activase, t-PA</item>
+        <item>Trandate</item>
+        <item>Transderm-Scop</item>
+        <item>TriCor</item>
+        <item>Trizivir</item>
+        <item>Truvada</item>
+        <item>Tussionex</item>
+        <item>Ultram</item>
+        <item>Unasyn</item>
+        <item>Valium</item>
+        <item>Valtrex</item>
+        <item>Vancocin</item>
+        <item>Vasotec</item>
+        <item>VESIcare</item>
+        <item>Viagra</item>
+        <item>Vibramycin, Doryx</item>
+        <item>Viramune, NVP</item>
+        <item>Virazole</item>
+        <item>Vistaril</item>
+        <item>Voltaren Gel</item>
+        <item>Voltaren XR</item>
+        <item>Vytorin</item>
+        <item>Wellbutrin</item>
+        <item>Xanax</item>
+        <item>Xarelto</item>
+        <item>Xopenex</item>
+        <item>Xyzal</item>
+        <item>Zalatan</item>
+        <item>Zantac</item>
+        <item>Zestoretic, Prinzide</item>
+        <item>Zetia</item>
+        <item>Zithromax, Zmax</item>
+        <item>Zocor</item>
+        <item>Zofran</item>
+        <item>Zoloft</item>
+        <item>Zosyn, Tazocin</item>
+        <item>Zovirax, Sitavig</item>
+        <item>Zyprexa</item>
+        <item>Zyrtec</item>
+        <item>Zyvox, Zyvoxam</item>
+    </string-array>
+
+    <string-array name="WheelArrayPharma">
+        <item>2-azetidinone</item>
+        <item>5 alpha reductase inhibitor</item>
+        <item>5 HT3 receptor antagonist</item>
+        <item>ACE + Ca channel blocker</item>
+        <item>ACE + thiazide diuretic</item>
+        <item>ACE inhibitor</item>
+        <item>Acetylcholinesterase</item>
+        <item>alpha 1 blocker</item>
+        <item>alpha 2 adrenergic agonist</item>
+        <item>Alpha 2 antagonist</item>
+        <item>Antiarrhythia</item>
+        <item>Antiarrhythmic</item>
+        <item>Antibacterial</item>
+        <item>Antibiotic + sulfonamide</item>
+        <item>anticholinergic</item>
+        <item>Anticoagulant</item>
+        <item>Anticonvulsant</item>
+        <item>Antifungal</item>
+        <item>Antifungal + corticosteroid</item>
+        <item>Antihistamine</item>
+        <item>Anti-inflammatory</item>
+        <item>Antilipemic, omega 3 fatty acids</item>
+        <item>Antilipemic, vitamin</item>
+        <item>Antimalarial</item>
+        <item>Antimicrobial</item>
+        <item>Antimycobacterial</item>
+        <item>Antiparasitic, antimicrobial</item>
+        <item>Antiplatelet</item>
+        <item>Antipsychotic</item>
+        <item>Antitussive</item>
+        <item>Antitussive, expectorant</item>
+        <item>Antiviral</item>
+        <item>ARB</item>
+        <item>ARB + thiazide</item>
+        <item>B 2 agonist</item>
+        <item>B agonist</item>
+        <item>B Blockers, ophth</item>
+        <item>B2 agonist</item>
+        <item>B2 agonist, anticholinergic</item>
+        <item>B2 Agonist, corticosteroid</item>
+        <item>Bactericidal agent</item>
+        <item>Barbituate</item>
+        <item>Beta blocker</item>
+        <item>Biguanide</item>
+        <item>Blocks reabsorption of urate</item>
+        <item>BZD</item>
+        <item>Ca channel blocker</item>
+        <item>combination</item>
+        <item>corticosteroid</item>
+        <item>Decongestant</item>
+        <item>Dependence</item>
+        <item>DMARD</item>
+        <item>Dopamine reuptake inhibitor</item>
+        <item>DPP IV Inhibitor</item>
+        <item>DPP IV inhibitor + glucophage</item>
+        <item>Fibrate</item>
+        <item>GI agent</item>
+        <item>GI prokinetic</item>
+        <item>GLP 1 agonists</item>
+        <item>H 1 antagonist + codiene</item>
+        <item>H. pylori Tx + PPI</item>
+        <item>H1 antagonist</item>
+        <item>H1 antagonist + opiod</item>
+        <item>H1 antagonist, ophth.</item>
+        <item>H2 antagonist</item>
+        <item>Hemostatic agent</item>
+        <item>HMG-CoA Reductase Inhibitor</item>
+        <item>Hypnotics</item>
+        <item>Hypoglycemic tx</item>
+        <item>Inhibits production of DHT</item>
+        <item>Inotrope</item>
+        <item>Intermediate to long insulin</item>
+        <item>Iontropic agent</item>
+        <item>Laxative</item>
+        <item>leukotriene receptor antagonist</item>
+        <item>LMWH</item>
+        <item>Long insulin</item>
+        <item>Loop diuretic</item>
+        <item>Miotic, ophth.</item>
+        <item>Mucolytic</item>
+        <item>Nasal corticosteroid</item>
+        <item>Neurologic</item>
+        <item>Nitrate</item>
+        <item>NMDA receptor antagonist</item>
+        <item>NSAID</item>
+        <item>Opiate agonist</item>
+        <item>Opioid</item>
+        <item>Opioid antagonist</item>
+        <item>Pain relief, bladder</item>
+        <item>Phenothiazine, antipsychotic</item>
+        <item>Potassium sparing + thiazide diuretic</item>
+        <!--<item>Potassium sparing diuretic, selective aldosterone blocker</item>-->
+        <item>PPI</item>
+        <item>Prostaglandin, eye</item>
+        <item>Rapid insulin</item>
+        <item>Serotonin receptor agonist</item>
+        <item>Sexual dysfunction</item>
+        <item>SGLT2 inhibitors</item>
+        <item>SNRI</item>
+        <item>SSRI</item>
+        <item>steroid</item>
+        <item>Stimulant</item>
+        <item>Sulfonylurea</item>
+        <item>sulfonylurea + glucophage</item>
+        <item>Thiazide diuretic</item>
+        <item>Thiazolidinedione</item>
+        <item>Thrombolytics</item>
+        <item>Thyroid agent</item>
+        <item>Topical</item>
+        <item>Topical antibiotic</item>
+        <item>Topical clindamycin</item>
+        <item>Tricyclic</item>
+        <item>Vasodilator/nitrate</item>
+        <item>Xanthine oxidase inhibitors</item>
+    </string-array>
+
+    <string-array name="WheelArrayThera">
+        <item>1st generation</item>
+        <item>1st generation cephalosporin</item>
+        <item>1st generation penicillin</item>
+        <item>2nd generation cephalosporin</item>
+        <item>3rd generation cephalosporin</item>
+        <item>3rd generation pencillin</item>
+        <item>4th generation cephalosporin</item>
+        <item>4th generation penicillin</item>
+        <item>ACLS, Class II and II, non selective beta blocker</item>
+        <item>ACLS, Proarrhythmic</item>
+        <item>Acne</item>
+        <item>ADHD</item>
+        <item>Agent for AD</item>
+        <item>Alcohol</item>
+        <item>Analgesia</item>
+        <item>Analgesia combo</item>
+        <item>Anti CMV</item>
+        <item>Anti hepatitis B</item>
+        <item>Anti herpetic</item>
+        <item>Anti HIV combo</item>
+        <item>Anti influenza</item>
+        <item>Antiallergy</item>
+        <item>Antianxiety</item>
+        <item>Antiarrhythmic</item>
+        <item>Antiasthmatic</item>
+        <item>Antibacterial, anti-parasitic</item>
+        <item>Anti-bacterials</item>
+        <item>Antibiotic</item>
+        <item>Anticoagulant</item>
+        <item>Antidepressant</item>
+        <item>Antidiabetic</item>
+        <item>Anti-diabetic</item>
+        <item>Antidiarrheal</item>
+        <item>Antiemetic</item>
+        <item>Antiepileptic</item>
+        <item>Antiherpetic</item>
+        <item>Antihyperlipidemic</item>
+        <item>Antihypertensive</item>
+        <item>Antihypertensive, antiangina</item>
+        <item>Antihypertensive, antianginal</item>
+        <item>Antihypertensive, antianginal, BPH agent</item>
+        <item>Antihypertensive, BPH agent</item>
+        <item>Anti-inflammatory</item>
+        <item>Anti-malaria, anti- pneumocystis</item>
+        <item>Antimetabolite antineoplastic agent</item>
+        <item>Antineuralgic</item>
+        <item>AntiParkinson agent</item>
+        <item>AntiParkinson agent, dopamine agonist</item>
+        <item>AntiParkinson agent, Dopamine agonist </item>
+        <item>Antipsychotic</item>
+        <item>Antispasmodic</item>
+        <item>Antitussive</item>
+        <item>Antiulcer</item>
+        <item>Atypical </item>
+        <item>Atypical, anitmanic</item>
+        <item>Biologic response modification</item>
+        <item>Bipolar DO</item>
+        <item>Bladder pain relief</item>
+        <item>BPH agent</item>
+        <item>Broad spectrum </item>
+        <item>Carbapenem</item>
+        <item>Cholinesterase inhibitor, AD agent</item>
+        <item>Chronic hepatitis C</item>
+        <item>Clot dissolution</item>
+        <item>Clot inhibition</item>
+        <item>Cough suppression, expectorant</item>
+        <item>COX 2 inhibitor</item>
+        <!--<item>Decarboxylase inhibitor + dopamine precursor, AntiParkinson</item>-->
+        <item>Decongestant</item>
+        <item>ED</item>
+        <item>Factor Xa inhibitor</item>
+        <item>Floroquinolone</item>
+        <item>Fluoroquinolone</item>
+        <item>Gastric antisecretory</item>
+        <item>Glaucoma</item>
+        <item>Glycopeptides</item>
+        <item>Gout</item>
+        <item>Heparin antagonist</item>
+        <item>IBD</item>
+        <item>Immune suppression</item>
+        <item>Inhaled antiviral</item>
+        <item>LABA</item>
+        <item>Leprosy</item>
+        <item>Macrolide</item>
+        <item>Migraine agent</item>
+        <item>Motion sickness</item>
+        <item>NNRTI</item>
+        <item>NRTI</item>
+        <item>Osmotic</item>
+        <item>Other antimicrobial</item>
+        <item>Parietal cell inhibitor</item>
+        <item>Pressor</item>
+        <item>Protease Inhibitors</item>
+        <item>Quinolone</item>
+        <item>RA</item>
+        <item>SABA</item>
+        <item>Sleep</item>
+        <item>Stimulant</item>
+        <item>Stool softener</item>
+        <item>Sulfonamide</item>
+        <item>Superficial BCC</item>
+        <item>Supplemental thyroid hormone</item>
+        <item>Suppression of thyroid</item>
+        <item>Tetracycline</item>
+        <item>TNF blockade</item>
+        <item>Tobacco</item>
+        <item>Topical anesthetic</item>
+        <item>Topical anti-inflammatory</item>
+        <item>Tuberculosis tx</item>
+        <item>Tuberculosis, leprosy, Legionnaire\'s tx</item>
+        <item>Tx of hypoglycemia</item>
+        <item>Urinary antibiotic</item>
+        <item>Vasodialator</item>
+        <item>Topical clindamycin</item>
+        <item>Tricyclic</item>
+        <item>Vasodilator/nitrate</item>
+        <item>Xanthine oxidase inhibitors</item>
+    </string-array>
+</resources>
