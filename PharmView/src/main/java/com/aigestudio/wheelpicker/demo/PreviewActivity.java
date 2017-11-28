@@ -16,13 +16,8 @@ import com.aigestudio.wheelpicker.WheelPickerLeft;
  */
 public class PreviewActivity extends Activity implements  WheelPicker.OnItemSelectedListener ,   View.OnClickListener {
 
-
     private WheelPicker wheelLeft;
-
-    //private WheelPicker wheelCenter;
     private WheelPicker wheelCenter;
-
-    //private WheelPicker wheelRight;
     private WheelPicker wheelRight;
 
     private Button getValueButton;
@@ -57,7 +52,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         getValueButtonItemIndex = (int) (Math.random() * wheelCenter.getData().size());
 
     }
-
+    int counter = 0;
     @Override
     public void onItemSelected(WheelPicker picker, Object data, int position) {
         String text = "";
@@ -72,11 +67,22 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 text = "Right:";
                 break;
         }
-        Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
+
+//        Toast toast = Toast.makeText(this, resId, Toast.LENGTH_SHORT);
+//        TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+//        v.setTextColor(Color.RED);
+//        toast.show();
     }
 
     @Override
     public void onClick(View v) {
+        counter++;
+        String text = "Third Try! (Display Hint Here)";
+        if (counter == 3){
+            Toast.makeText(this, text , Toast.LENGTH_SHORT).show();
+            counter = 0;
+        }
         Integer temp = wheelCenter.getCurrentItemPosition();
         getSpinnerValue();
         resultButton = (Button) findViewById(R.id.result_btn);
