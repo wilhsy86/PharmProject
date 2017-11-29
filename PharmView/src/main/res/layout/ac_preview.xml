@@ -11,25 +11,41 @@
                   android:layout_height="wrap_content"
                   android:gravity="center"
                   android:orientation="horizontal"
-                  android:layout_marginTop="10dp">
+                  android:layout_marginTop="10dp"
+                  android:paddingBottom="5dp">
 
         <Button android:id="@+id/get_value_btn"
-                android:gravity="left"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Goto '?'" />
+            android:text="Check Answer"
+            android:textColor="#536D8A"
+            android:textSize="20sp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+
+
+            />
         <TextView
-            android:layout_width="1075px"
+            android:layout_width="800px"
             android:gravity="center"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="(Generic Question Here)"/>
+            android:text="Generic Question Here"/>
 
         <Button android:id="@+id/show_legend_btn"
-            android:gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Show Legend" />
+            android:text="Show Legend"
+            android:textColor="#536D8A"
+            android:textSize="20sp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"/>
 
 
     </LinearLayout>
