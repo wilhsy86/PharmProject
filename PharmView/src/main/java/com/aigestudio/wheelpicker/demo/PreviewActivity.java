@@ -28,7 +28,8 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private Button resultButton;
     private Button showLegendButton;
     private Integer getValueButtonItemIndex;
-    private TextView t;
+    private TextView legend;
+    private TextView genericName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +57,11 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         getValueButton.setText("Check Answer");
         resultButton.setVisibility(View.INVISIBLE);
 
-        t = (TextView) findViewById(R.id.Cardiovascular);
+        legend = (TextView) findViewById(R.id.Cardiovascular);
+        genericName = (TextView) findViewById(R.id.generic_name);
 //
-        t.setVisibility(View.INVISIBLE);
-        t.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
+        legend.setVisibility(View.INVISIBLE);
+        legend.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
                                       "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#EE0000\">" + "Endocrine   " + "</font>" +  "<br>" +
                                       "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
                                       "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
@@ -75,7 +77,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                t.setVisibility(View.VISIBLE);
+                legend.setVisibility(View.VISIBLE);
             }
         }).run();
 
@@ -89,6 +91,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     @Override
     public void onItemSelected(WheelPicker picker, Object data, int position) {
         resultButton.setVisibility(View.INVISIBLE);
+        genericName.setText("New Question");
         String text = "";
         switch (picker.getId()) {
             case R.id.main_wheel_left:
@@ -113,6 +116,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.get_value_btn:
+
                 counter++;
                 String text = "Third Try! (Display Hint Here)";
                 if (counter == 3){
@@ -152,11 +156,11 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
 
                 if (showLegend.equals(showLegendButton.getText())){
-                    t.setVisibility(View.VISIBLE);
+                    legend.setVisibility(View.VISIBLE);
                     showLegendButton.setText("Hide Legend");
                 }
                 else if (hideLegend.equals(showLegendButton.getText())) {
-                    t.setVisibility(View.INVISIBLE);
+                    legend.setVisibility(View.INVISIBLE);
                     showLegendButton.setText("Show Legend");
                 }
 
