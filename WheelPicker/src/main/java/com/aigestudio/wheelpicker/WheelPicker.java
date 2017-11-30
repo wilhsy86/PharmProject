@@ -90,7 +90,7 @@ public class WheelPicker extends View implements IDebug, IWheelPicker, Runnable 
 
     {
         mLocationIndex =  myApp.getindex();
-        myApp.setIndex(mLocationIndex + 1);
+        myApp.setIndex((mLocationIndex + 1) % 3);
     }
 
     public WheelPicker(Context context) {
