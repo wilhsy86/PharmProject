@@ -91,7 +91,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     @Override
     public void onItemSelected(WheelPicker picker, Object data, int position) {
         resultButton.setVisibility(View.INVISIBLE);
-        genericName.setText("New Question");
+        //genericName.setText("New Question");
         String text = "";
         switch (picker.getId()) {
             case R.id.main_wheel_left:
