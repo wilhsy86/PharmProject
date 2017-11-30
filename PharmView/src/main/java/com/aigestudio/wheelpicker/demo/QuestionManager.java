@@ -1,5 +1,6 @@
 package com.aigestudio.wheelpicker.demo;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 
 import java.io.File;
@@ -14,7 +15,11 @@ import java.util.Scanner;
 
 public class QuestionManager {
 
-    public QuestionManager() throws IOException {
+
+    public QuestionManager(Context context) throws IOException {
+        AssetManager am = context.getAssets();
+        InputStream is = am.open("test.txt");
+
         String fileName = "Drugs.txt";
         String[] colors = {"Red", "Lime", "Orange", "Brown", "Blue", "Grey",
                 "Yellow", "Green", "Pink", "Purple", "Maroon", "White", "Black"
@@ -25,7 +30,7 @@ public class QuestionManager {
 //        ArrayList<LinkedList> drugObjects = new ArrayList<>();
         int ind = 0;
         try {
-            File file = new File("@assets/drugs");
+            File file = new File("@assets/drugs.txt");
             Scanner scanner = new Scanner(file);
             scanner.useDelimiter("\t|\r\n");
 
@@ -40,8 +45,7 @@ public class QuestionManager {
             }
         } catch (FileNotFoundException ex) {
             System.out.println(
-                    "Unable to open file '"
-                            + fileName + "'");
+                    "Unable to open file '" + fileName + "'");
         }
     }
 

@@ -1,8 +1,11 @@
 package com.aigestudio.wheelpicker.demo;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,6 +13,13 @@ import android.widget.Toast;
 
 import com.aigestudio.wheelpicker.WheelPicker;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 //import com.aigestudio.wheelpicker.WheelPickerRight;
@@ -19,7 +29,7 @@ import java.util.TimerTask;
  * @author AigeStudio 2016-07-08
  */
 public class PreviewActivity extends Activity implements  WheelPicker.OnItemSelectedListener ,   View.OnClickListener {
-
+    private static final String TAG = WheelPicker.class.getSimpleName();
     private WheelPicker wheelLeft;
     private WheelPicker wheelCenter;
     private WheelPicker wheelRight;
@@ -30,10 +40,16 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private Integer getValueButtonItemIndex;
     private TextView legend;
     private TextView genericName;
-    private QuestionManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        try {
+//            //new QuestionManager();
+//            Log.i(TAG, "Question Manager initiated!!!!!!!!!!!!");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_preview);
         wheelLeft = (WheelPicker) findViewById(R.id.main_wheel_left);
@@ -112,6 +128,38 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //        v.setTextColor(Color.RED);
 //        toast.show();
     }
+
+//    public void QuestionManager(Context context) throws IOException {
+//        AssetManager am = context.getAssets();
+//        InputStream is = am.open("test.txt");
+//        String fileName = "Drugs.txt";
+//        String[] colors = {"Red", "Lime", "Orange", "Brown", "Blue", "Grey",
+//                "Yellow", "Green", "Pink", "Purple", "Maroon", "White", "Black" };
+//        List<String> colorList = Arrays.asList(colors);
+//
+////        LinkedList<String> drugAttributes = new LinkedList<>();
+////        ArrayList<LinkedList> drugObjects = new ArrayList<>();
+//        int ind = 0;
+//        try {
+//            File file = new File("@assets/drugs");
+//            String text = new String(String.valueOf(is));
+//            Scanner scanner = new Scanner(text);
+//            scanner.useDelimiter("\t|\r\n");
+//
+//            while (scanner.hasNextLine()) {
+//                String input = scanner.next();
+//                System.out.println(input);
+////                drugAttributes.add(input);
+//
+//                if (colorList.contains(input)) {
+//                    System.out.println();
+//                }
+//            }
+//        } catch (FileNotFoundException ex) {
+//            System.out.println(
+//                    "Unable to open file '" + fileName + "'");
+//        }
+//    }
 
     @Override
     public void onClick(View view) {
