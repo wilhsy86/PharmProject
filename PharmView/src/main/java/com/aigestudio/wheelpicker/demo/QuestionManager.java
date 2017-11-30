@@ -4,6 +4,7 @@ import android.content.res.AssetManager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,9 +14,7 @@ import java.util.Scanner;
 
 public class QuestionManager {
 
-
-    public static void main(String[] args) {
-
+    public QuestionManager() throws IOException {
         String fileName = "Drugs.txt";
         String[] colors = {"Red", "Lime", "Orange", "Brown", "Blue", "Grey",
                 "Yellow", "Green", "Pink", "Purple", "Maroon", "White", "Black"
@@ -44,7 +43,6 @@ public class QuestionManager {
                     "Unable to open file '"
                             + fileName + "'");
         }
-
     }
 
 }

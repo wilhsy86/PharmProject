@@ -30,6 +30,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private Integer getValueButtonItemIndex;
     private TextView legend;
     private TextView genericName;
+    private QuestionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
