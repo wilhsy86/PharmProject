@@ -13,21 +13,18 @@ import android.widget.Toast;
 
 import com.aigestudio.wheelpicker.WheelPicker;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
-//import com.aigestudio.wheelpicker.WheelPickerRight;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
-/**
- * @author AigeStudio 2015-12-06
- * @author AigeStudio 2016-07-08
- */
+
 public class PreviewActivity extends Activity implements  WheelPicker.OnItemSelectedListener ,   View.OnClickListener {
     private static final String TAG = WheelPicker.class.getSimpleName();
     private WheelPicker wheelLeft;
@@ -37,9 +34,20 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private Button getValueButton;
     private Button resultButton;
     private Button showLegendButton;
+    private Button nextQuestion;
     private Integer getValueButtonItemIndex;
     private TextView legend;
     private TextView genericName;
+    private String genericAttr;
+    private String brandAttr;
+    private String pharmAttr;
+    private String theraAttr;
+    private String colorAttr;
+    private boolean[] used = new boolean[304];
+
+
+
+    private ArrayList<String> drugList = new ArrayList<String>();
 
 
     @Override
@@ -52,20 +60,13 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_preview);
+        genericName = (TextView) findViewById(R.id.generic_name);
         wheelLeft = (WheelPicker) findViewById(R.id.main_wheel_left);
         wheelLeft.setOnItemSelectedListener(this);
         wheelCenter = (WheelPicker) findViewById(R.id.main_wheel_center);
         wheelCenter.setOnItemSelectedListener(this);
         wheelRight = (WheelPicker) findViewById(R.id.main_wheel_right);
         wheelRight.setOnItemSelectedListener(this);
-
-//        getValueButton = (Button) findViewById(R.id.get_value_btn);
-//        getValueButton.setOnClickListener(this);
-//        getValueButton.setText("Selected Value is");
-
-
-
-
         getValueButton = (Button) findViewById(R.id.get_value_btn);
         resultButton = (Button) findViewById(R.id.result_btn);
         showLegendButton = (Button) findViewById(R.id.show_legend_btn);
@@ -73,15 +74,57 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         getValueButton.setOnClickListener(this);
         getValueButton.setText("Check Answer");
         resultButton.setVisibility(View.INVISIBLE);
-
         legend = (TextView) findViewById(R.id.Cardiovascular);
-        genericName = (TextView) findViewById(R.id.generic_name);
-//
+        genericName = (TextView) findViewById(R.id.generic_name);//
         legend.setVisibility(View.INVISIBLE);
         legend.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
-                                      "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#EE0000\">" + "Endocrine   " + "</font>" +  "<br>" +
-                                      "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
-                                      "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
+                "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#EE0000\">" + "Endocrine   " + "</font>" +  "<br>" +
+                "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
+                "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
+
+        {
+//            try {
+//                new QuestionManager();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        }
+
+        getValueButton = (Button) findViewById(R.id.get_value_btn);
+        getValueButton.setOnClickListener(this);
+        getValueButton.setText("Selected Value is");
+
+        drugList = getDrugs();
+        questionManager();
+
+
+
+//        AssetManager assetManager = getAssets();
+//        // To load text file
+//        InputStream input;
+//        try {
+//            input = assetManager.open("drugs.txt");
+//            reader = new BufferedReader(new InputStreamReader(input));
+//            while (input != null){
+//                line = reader.readLine();
+//                System.out.println(line);
+////            int size = input.available();
+////            byte[] buffer = new byte[size];
+////            input.read(buffer);
+////            input.close();
+//
+//                // byte buffer into a string
+//                String text = new String(line);
+//            }
+//
+//
+//            //genericName.setText(text);
+//        } catch (IOException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+
+
 
 
     }
@@ -99,6 +142,78 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         }).run();
 
             //t.setVisibility(View.INVISIBLE);
+    }
+
+    public ArrayList<String> getDrugs(){
+        ArrayList<String> drugList = new ArrayList<String>();
+        String questionGeneric = "";
+
+        try {
+            AssetManager assetManager = getAssets();
+            // To load text file
+            InputStream input = assetManager.open("drugs.txt");
+
+            if (input != null){
+                //prepare file for reading
+                InputStreamReader inputreader = new InputStreamReader(input);
+                BufferedReader reader = new BufferedReader(inputreader);
+                String line;
+
+                do {
+                    line = reader.readLine();
+                    if (line != null){
+                        //System.out.println(line);
+                        drugList.add(line);
+                    }
+
+                    //questionGeneric = line;
+                } while (line != null);
+                inputreader.close();
+                reader.close();
+
+            }
+            System.out.println("!!!!!!!!!!!!!!!!!!!Drug List Size is: " + drugList.size());
+            //System.out.println(drugList.get(303));
+            //genericName.setText(drugList.get(150));
+//            for (String S : drugList ) {
+//                //System.out.println(S);
+//
+//            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return drugList;
+    }
+
+    public void questionManager(){
+
+        //System.out.println("WWWWWWWWWRRRRRRRRRRR " + drugList.get(303));
+
+
+        Random rand = new Random();
+        int randomNum = rand.nextInt((drugList.size() - 0) + 1) + 0;
+        System.out.println("Random Number is: " + randomNum);
+        if (used[randomNum] == false){
+            String temp = drugList.get(randomNum);
+            used[randomNum] = true;
+            System.out.println("!!!!!!!!!!!!!!!! " + temp);
+
+            String[] columns = temp.split("\t");
+            String generic = columns[0];
+            String brand = columns[1];
+            String pharma = columns[2];
+            String thera = columns[3];
+            String color = columns[4];
+
+            System.out.println(" Values are " + generic + "  " + brand + "  " + pharma + "  " + thera + "  " + color);
+            genericName.setText(generic);
+        }
+    }
+
+    public void checkAnswer(){
+
     }
 
     private void getSpinnerValue() {
@@ -121,45 +236,17 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 text = "Right:";
                 break;
         }
-        //Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
 
-//        Toast toast = Toast.makeText(this, resId, Toast.LENGTH_SHORT);
-//        TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
-//        v.setTextColor(Color.RED);
-//        toast.show();
+
     }
 
-//    public void QuestionManager(Context context) throws IOException {
-//        AssetManager am = context.getAssets();
-//        InputStream is = am.open("test.txt");
-//        String fileName = "Drugs.txt";
-//        String[] colors = {"Red", "Lime", "Orange", "Brown", "Blue", "Grey",
-//                "Yellow", "Green", "Pink", "Purple", "Maroon", "White", "Black" };
-//        List<String> colorList = Arrays.asList(colors);
-//
-////        LinkedList<String> drugAttributes = new LinkedList<>();
-////        ArrayList<LinkedList> drugObjects = new ArrayList<>();
-//        int ind = 0;
-//        try {
-//            File file = new File("@assets/drugs");
-//            String text = new String(String.valueOf(is));
-//            Scanner scanner = new Scanner(text);
-//            scanner.useDelimiter("\t|\r\n");
-//
-//            while (scanner.hasNextLine()) {
-//                String input = scanner.next();
-//                System.out.println(input);
-////                drugAttributes.add(input);
-//
-//                if (colorList.contains(input)) {
-//                    System.out.println();
-//                }
-//            }
-//        } catch (FileNotFoundException ex) {
-//            System.out.println(
-//                    "Unable to open file '" + fileName + "'");
-//        }
-//    }
+
+
+
+
+
+
 
     @Override
     public void onClick(View view) {

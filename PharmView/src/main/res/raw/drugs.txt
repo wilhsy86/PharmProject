@@ -1,0 +1,304 @@
+amiodarone	Pacerone, Cordarone, Nexterone	Antiarrhythia	ACLS, Proarrhythmic	Red
+sotalol HCl	Betapace	Antiarrhythmic	ACLS, Class II and II, non selective beta blocker	Red
+lisinopril	Prinivil, Zestril	ACE inhibitor	Antihypertensive	Red
+ramipril	Altace	ACE inhibitor	Antihypertensive	Red
+benazepril HCl	Lotensin	ACE inhibitor	Antihypertensive	Red
+enalapril maleate	Vasotec	ACE inhibitor	Antihypertensive	Red
+simvastatin	Zocor	HMG-CoA Reductase Inhibitor	Antihyperlipidemic	Red
+atorvastin calcium	Lipitor	HMG-CoA Reductase Inhibitor	Antihyperlipidemic	Red
+lovastatin	Mevacor	HMG-CoA Reductase Inhibitor	Antihyperlipidemic	Red
+pravastatin sodium	Pravachol	HMG-CoA Reductase Inhibitor	Antihyperlipidemic	Red
+rosuvastatin calcium	Crestor	HMG-CoA Reductase Inhibitor	Antihyperlipidemic	Red
+exetimibe + simvastin	Vytorin	HMG-CoA Reductase Inhibitor	Antihyperlipidemic	Red
+gemfibrozil	Lopid	Fibrate	Antihyperlipidemic	Red
+fenofibrate	TriCor	Fibrate	Antihyperlipidemic	Red
+ezetimibe	Zetia	2-azetidinone	Antihyperlipidemic	Red
+niacin	Niaspan	Antilipemic, vitamin	Antihyperlipidemic	Red
+omega 3 acid ethyl esters	Lovaza	Antilipemic, omega 3 fatty acids	Antihyperlipidemic	Red
+losartan 	Cozaar	ARB	Antihypertensive	Red
+olmesartan medoxomil	Benicar	ARB	Antihypertensive	Red
+valsartan	Diovan	ARB	Antihypertensive	Red
+metoprolol tartrate	Lopressor	Beta blocker	Antihypertensive, antiangina	Red
+metoprolol succinate	Toprol XL	Beta blocker	Antihypertensive, antiangina	Red
+atenolol	Tenormin	Beta blocker	Antihypertensive, antiangina	Red
+carvedilol	Coreg	Beta blocker	Antihypertensive	Red
+propranolol HCl	Inderal	Beta blocker	Antihypertensive	Red
+nebivolol HCl	Bystolic	Beta blocker	Antihypertensive	Red
+lisinopril + HCTZ	Zestoretic, Prinzide	ACE + thiazide diuretic	Antihypertensive	Red
+losartan potassium + HCTZ	Hyzaar	ARB + thiazide	Antihypertensive	Red
+valsartan + HCTZ	Diovan HCT	ARB + thiazide	Antihypertensive	Red
+amlodipine besylate + benazepril HCL	Lotrel	ACE + Ca channel blocker	Antihypertensive	Red
+hydralazine HCl	Apresoline	Vasodilator/nitrate	Antihypertensive	Red
+clonidine HCl	Catapre, Nexiclon	alpha 2 adrenergic agonist	Antihypertensive	Red
+terazosin HCl	Hytrin	alpha 1 blocker	Antihypertensive, BPH agent	Red
+doxazosin mesylate	Cardura	alpha 1 blocker	Antihypertensive, BPH agent	Red
+amlodipine besylate 	Norvasc	Ca channel blocker	Antihypertensive, antianginal, BPH agent	Red
+verapamil HCl	Isoptin, Calan, Verelan	Ca channel blocker	Antihypertensive, antianginal	Red
+nifedipine	Porcardia, Nifedical XL, Adalat	Ca channel blocker	Antihypertensive, antianginal	Red
+diltiazem HCl	Cardizem, Cartia, Tiazac	Ca Channel blocker	Antihypertensive, antianginal	Red
+furosemide	Lasix	Loop diuretic	Antihypertensive	Red
+bumetanide	Bumex	Loop diuretic	Antihypertensive	Red
+torsemide	Demadex	Loop diuretic	Antihypertensive	Red
+hydrochlorothiazide (HCTZ)	Microzide	Thiazide diuretic	Antihypertensive	Red
+spironolactone	Aldactone	Potassium sparing diuretic, selective aldosterone blocker	Antihypertensive	Red
+triamterene + HCTZ	Dyazide, Maxzide	Potassium sparing + thiazide diuretic	Antihypertensive	Red
+digoxin	Lanoxin, Digitek	Iontropic agent	Antiarrhythmic	Red
+clopidogrel	Plavix	Antiplatelet	Clot inhibition	Red
+eptifibatide	Integrilin	Antiplatelet	Clot inhibition	Red
+acetylsalicyclic acid + dipyridamole	Aggrenox	Antiplatelet	Clot inhibition	Red
+labetalol	Trandate	Beta blocker	Antihypertensive	Red
+nitroglycerin ointment	Nitro-BID	Nitrate	Vasodialator	Red
+nitroglycerin sublingual	Nitrostat	Nitrate	Vasodialator	Red
+nitroglycerin transdermal	Nitro-dur, Transderm-Nitro	Nitrate	Vasodialator	Red
+dobutamine	NULL	Inotrope	Pressor	Red
+dopamine	NULL	Inotrope	Pressor	Red
+ephedrine	NULL	Inotrope	Pressor	Red
+midodrine	Amatine	Inotrope	Pressor	Red
+milrinone	NULL	Inotrope	Pressor	Red
+alteplase	TPA, Activase, t-PA	Thrombolytics	Clot dissolution	Red
+reteplase	Retavase	Thrombolytics	Clot dissolution	Red
+streptokinase	Streptase	Thrombolytics	Clot dissolution	Red
+nitrofurantoin	Macrodantin, Macrobid, Furadantin	Antibacterial	Urinary antibiotic	Lime
+sulfamethaxazole + trimethoprim	Bactrim, Septra	Antibiotic + sulfonamide	Sulfonamide	Lime
+amoxicillin trihydrate	Amoxil, Moxatag, Trimox	Antibacterial	3rd generation pencillin	Lime
+amoxicillin with clavulanate potassium	Augmentin	Antibacterial	3rd generation pencillin	Lime
+cephalexin monohydrate	Keflex	Antibacterial	1st generation cephalosporin	Lime
+clindamycin HCl	Cleocin	Antibacterial	Other antimicrobial	Lime
+ciprofloxacin HCl	Cipro	Antibacterial	Fluoroquinolone	Lime
+levofloxacin	Levaquin	Antibacterial	Floroquinolone	Lime
+azithromycin dihydrate	Zithromax, Zmax	Antibacterial	Macrolide	Lime
+doxycycline hyclate	Vibramycin, Doryx	Antibacterial	Tetracycline	Lime
+mupirocin	Bactroban	Topical antibiotic	Antibiotic	Lime
+ceflacor	Ceclor	Antibacterial	2nd generation cephalosporin	Lime
+cefdinir	Omnicef	Antibacterial	3rd generation cephalosporin	Lime
+ceftriazone	Rocephin	Antibacterial	3rd generation cephalosporin	Lime
+cefepime	Maxipime	Antibacterial	4th generation cephalosporin	Lime
+vancomycin	Vancocin	Antibacterial	Glycopeptides	Lime
+clarithromycin	Biaxin	Antibacterial	Macrolide	Lime
+penicillin V	NULL	Antibacterial	1st generation penicillin	Lime
+ampicillin	NULL	Antibacterial	3rd generation pencillin	Lime
+ampicillin + sulbactam	Unasyn	Antibacterial	3rd generation pencillin	Lime
+piperacillin tazobactam	Zosyn, Tazocin	Antibacterial	4th generation penicillin	Lime
+moxifloxacin	Avelox	Antibacterial	Quinolone	Lime
+minocycline	Minocin, Solodyn	Antibacterial	Tetracycline	Lime
+chloramphenicol	Pentamycetin, Chloromycetin	Antibacterial	Broad spectrum 	Lime
+linezolid	Zyvox, Zyvoxam	Antibacterial	Broad spectrum 	Lime
+metronidazole	Flagyl, Nidazol	Antibacterial	Antibacterial, anti-parasitic	Lime
+fluconazole	Diflucan	Antifungal	NULL	Lime
+amphotericin B	NULL	Antifungal	NULL	Lime
+nystatin	Nystop	Antifungal	NULL	Lime
+griseofulvin	NULL	Antifungal	NULL	Lime
+clotrimazole + betamethasone	Lotrisone	Antifungal + corticosteroid	NULL	Lime
+terbinafine	Lamisil	Antifungal	NULL	Lime
+chloroqine	Aralen	Antimalarial	NULL	Lime
+primaquine	NULL	Antimicrobial	Anti-malaria, anti- pneumocystis	Lime
+dapsone	Daczone	Antiparasitic, antimicrobial	Leprosy	Lime
+ethambutol	Myambutol	Antimycobacterial 	Tuberculosis tx	Lime
+isoniazid	INH, Isotamine	Bactericidal agent	Tuberculosis tx	Lime
+rifampin	Rifadin, Rofact	Antibacterial	Tuberculosis, leprosy, Legionnaire's tx	Lime
+isoniazid + rifampin + pyrazinamide	Rifater	Antimycobacterial 	NULL	Lime
+foscarnet	Foscavir	Antiviral	Anti CMV	Lime
+ganciclovir	Cytovene	Antiviral	Anti CMV	Lime
+acyclovir	Zovirax, Sitavig	Antiviral	Anti herpetic	Lime
+famciclovir	Famvir	Antiviral	Antiherpetic	Lime
+valacyclovir	Valtrex	Antiviral	Antiherpetic	Lime
+efavirenz + emtricitabine + tenofovir disoproxil fumarate	Atripla	Antiviral	Anti HIV combo	Lime
+lamivudine + zidovudine	Combivir	Antiviral	Anti HIV combo	Lime
+abacavir + lamivudine + zidovudine	Trizivir	Antiviral	Anti HIV combo	Lime
+emtricitabine + tenofovir disoproxil fumarate	Truvada	Antiviral	Anti HIV combo	Lime
+efavirenz 	Sustiva, EFV	Antiviral	NNRTI	Lime
+nevirapine	Viramune, NVP	Antiviral	NNRTI	Lime
+emtricitabine  	Emtriva	Antiviral	NRTI	Lime
+zidovudine	Retrovir, AZT	Antiviral	NNRTI	Lime
+atazanavir	Reyataz, ATV	Antiviral	Protease Inhibitors	Lime
+fosamprenavir	Lexiva, FPV	Antiviral	Protease Inhibitors	Lime
+ritonavir	Norvir, RTV	Antiviral	Protease Inhibitors	Lime
+saquinaivir	Invirase	Antiviral	Protease Inhibitors	Lime
+amantadine	NULL	Antiviral	Anti influenza	Lime
+oseltamivir	Tamiflu	Antiviral	Anti influenza	Lime
+rimantadine	Flumadine	Antiviral	Anti influenza	Lime
+zanamivir	Relenza	Antiviral	Anti influenza	Lime
+interferon Alfa 2B	Lintron A	Antiviral	Anti hepatitis B	Lime
+peginterferon alfa 2A	Pegasys	Antiviral	Chronic hepatitis C	Lime
+ribavirin	Virazole	Antiviral	Inhaled antiviral	Lime
+meropenem	Merrem	Antimicrobial	Carbapenem	Lime
+imipenem- cilastatin	Primaxin	Antimicrobial	Carbapenem	Lime
+rizatriptan	Maxalt	Serotonin receptor agonist	Migraine agent	Orange
+donepezil HCl	Aricept	Acetylcholinesterase	Agent for AD	Orange
+memantine HCl	Namenda	NMDA receptor antagonist	Agent for AD	Orange
+levetiracetam	Keppra	Anticonvulsant	NULL	Orange
+carbamazepine	Tegretol, Carbatrol, Equetro	Anticonvulsant	NULL	Orange
+pregabalin	Lyrica	Anticonvulsant	Antineuralgic	Orange
+gabapentin	Neurontin	Anticonvulsant	Antineuralgic	Orange
+divalproex sodium	Depakote	Anticonvulsant	Antipsychotic	Orange
+clonazepam	Klonopin	BZD	Antiepileptic	Orange
+topiramate	Topamax	Anticonvulsant	Antiepileptic	Orange
+lamotrigine	Lamictal	Anticonvulsant	Antiepileptic	Orange
+phenytoin sodium	Dilantin	Anticonvulsant	Antiepileptic	Orange
+primidone	Mysoline	Barbituate	Antiepileptic	Orange
+ropinirole HCl	Requip	Neurologic	AntiParkinson agent, dopamine agonist	Orange
+pramipexole 	Mirapex	Neurologic	AntiParkinson agent, Dopamine agonist 	Orange
+carbidopa + levodopa	Sinemet	Neurologic	Decarboxylase inhibitor + dopamine precursor, AntiParkinson	Orange
+benztropine mesylate	Cogentin	Neurologic	AntiParkinson agent	Orange
+rivastigmine	Exelon	Neurologic	Cholinesterase inhibitor, AD agent	Orange
+phenobarbital	NULL	Anticonvulsant	Antiepileptic	Orange
+butalbital, acetaminophen, caffeine	Fioricet	Barbituate	Migraine agent	Orange
+rabeprazole	Aciphex	PPI	Parietal cell inhibitor	Brown
+pantoprazole	Protonix	PPI	Parietal cell inhibitor	Brown
+omeprazole	Prilosec	PPI	Parietal cell inhibitor	Brown
+esomeprazole	Nexium	PPI	Parietal cell inhibitor	Brown
+sucralfate	Carafate	GI agent 	Antiulcer	Brown
+ranitidine HCl	Zantac	H2 antagonist	Gastric antisecretory	Brown
+famotidine	Pepcid	H2 antagonist	Gastric antisecretory	Brown
+dexlansoprazole	Dexilant	PPI	Parietal cell inhibitor	Brown
+diphenoxylate HCl + atropine sulfate	Lomotil	Opiate agonist	Antidiarrheal	Brown
+promethazine HCl	Phenergan	H2 antagonist	Antiemetic	Brown
+metoclopramide HCl	Reglan	GI prokinetic	Antiemetic	Brown
+ondansetron HCl	Zofran	5 HT3 receptor antagonist	Antiemetic	Brown
+procholorperazine	Compazine	Phenothiazine, antipsychotic	Antiemetic	Brown
+dimenhydrinate	Dramamine	5 HT3 receptor antagonist	Antiemetic	Brown
+scopolamine	Transderm-Scop	NULL	Antiemetic	Brown
+cimetidine	Tagamet	H2 antagonist	Antiulcer	Brown
+lansoprazole + amoxicillin + clarithromycin	Prevpac	H. pylori Tx + PPI	Antiulcer	Brown
+primidone	Mysoline	Barbituate	Antiepileptic	Orange
+lactulose	Enulose	Laxative	Osmotic	Brown
+Polyethylene glycol	GoLYTELY, TriLyte, Klean-Prep	Laxative	Osmotic	Brown
+sodium phosphate	Fleet enema, OsmoPrep	Laxative	Osmotic	Brown
+bisacodyl	Dulcolax, Feen-a-Mint, Fleet	Laxative	Stimulant	Brown
+sulfasalazine	Azulfidine, Salazopyrin	DMARD	IBD	Brown
+senna	Senokot, Ex-Lax	Laxative	Stimulant	Brown
+docusate	Colace, Socu-Soft, Dulcolax	Laxative	Stool softener	Brown
+fluticasone propionate + salmeterol xinafoate	Advair	B2 Agonist, corticosteroid	Antiasthmatic	Blue
+budesonide + formoterol fumarate dihydrate	Symbicort	B2 Agonist, corticosteroid	Antiasthmatic	Blue
+fluticasone propionate 	Flovent	corticosteroid	Antiasthmatic	Blue
+tiotropium bromide	Spiriva	anticholinergic	Antiasthmatic	Blue
+montelukast sodium	Singulair	leukotriene receptor antagonist	Antiasthmatic	Blue
+albuterol sulfate	Proventil HFA, Proair, Venolin HFA	B2 agonist 	SABA	Blue
+levalbuterol HCl	Xopenex	B 2 agonist	SABA	Blue
+ipratropium bromide + albuterol sulfate	Combivent, DuoNeb	B2 agonist, anticholinergic	SABA	Blue
+salmeterol	Serevent	B agonist	LABA	Blue
+mometasone + formoterol	Dulera	combination	Antiasthmatic	Blue
+beclomethasone	QVAR	steroid	Antiasthmatic	Blue
+budesonide 	Pulmicort	steroid	Antiasthmatic	Blue
+acetylcyesteine	Mucomyst	Mucolytic	NULL	Blue
+cromolyn	Nu-Cromolyn	Anti-inflammatory	Antiasthmatic	Blue
+quetiapine fumerate	Seroquel	Antipsychotic	Atypical 	Grey
+aripiprazole	Abilify	Antipsychotic	Atypical 	Grey
+risperidone	Risperdal	Antipsychotic	Atypical 	Grey
+ziprasidone HCl	Geodon	Antipsychotic	Atypical 	Grey
+lithium carbonate	Lithonate, Lithotabs, Lithobid	Antipsychotic	Bipolar DO	Grey
+olanzapine	Zyprexa	Antipsychotic	Atypical, anitmanic	Grey
+alprazolam	Xanax	BZD	Antianxiety	Grey
+lorazepam	Ativan	BZD	Antianxiety	Grey
+diazepam	Valium	BZD	Antianxiety	Grey
+buspirone HCl	BuSpar	NULL	Antianxiety	Grey
+hydroxyzine pamoate	Vistaril	Antihistamine	Antianxiety	Grey
+citalopram hydrobromide	Celexa	SSRI	Antidepressant	Grey
+sertraline HCl	Zoloft	SSRI	Antidepressant	Grey
+fluoxetine HCl	Prozac	SSRI	Antidepressant	Grey
+escitalopram oxalate	Lexapro	SSRI	Antidepressant	Grey
+paroxetine HCl	Paxil	SSRI	Antidepressant	Grey
+duloxetine HCl	Cymbalta	SNRI	Antidepressant	Grey
+venlafaxine HCl	Effexor	SNRI	Antidepressant	Grey
+desvenlafaxine	Pristiq	SNRI	Antidepressant	Grey
+bupropioon HCl	Wellbutrin	Dopamine reuptake inhibitor	Antidepressant	Grey
+amitriptyline HCl	Elavil	Tricyclic	Antidepressant	Grey
+doxepin HCl	Sinequan	Tricyclic	Antidepressant	Grey
+mirtazapine	Remeron	Alpha 2 antagonist	Antidepressant	Grey
+trazodone	Oleptro	Tricyclic	Antidepressant	Grey
+haloperidol	Haldol	Antipsychotic	1st generation	Grey
+eszopiclone	Lunesta	Hypnotics	Sleep	Grey
+zaleplon	Sonata	Hypnotics	Sleep	Grey
+solpidem	Ambien	Hypnotics	Sleep	Grey
+disulfiram	Antabuse	Dependence	Alcohol	Grey
+varenicline	Chantix	Dependence	Tobacco	Grey
+dextroamphetamine + amphetamine	Adderall	Stimulant	ADHD	Grey
+atomoxetine	Strattera	Stimulant	ADHD	Grey
+clonidine	Catapres	Stimulant	ADHD	Grey
+dutasteride	Avodart	Inhibits production of DHT	BPH agent	Yellow
+finasteride	Proscar, Propecia	5 alpha reductase inhibitor	BPH agent	Yellow
+tamsulosin	Flomax	Alpha 1 blocker	BPH agent	Yellow
+oxybutynin	Ditropan	Anticholinergic	Antispasmodic	Yellow
+solifenacin	VESIcare	Anticholinergic	Antispasmodic	Yellow
+phenazopyridine	Pyridium, Urogesic	Pain relief, bladder	Bladder pain relief	Yellow
+sildenafil	Viagra	Sexual dysfunction	ED	Yellow
+tadalafil	Cialis	Sexual dysfunction	ED	Yellow
+benzonatate	Tessalon	Antitussive	Antitussive	Green
+chlorpheniramine + hydrocodone	Tussionex	H1 antagonist + opiod	Antitussive	Green
+promethazine HCl + codeine	Phenergan w/codeine	H 1 antagonist + codiene	Antitussive	Green
+fluticasone propionate	Flonase	Nasal corticosteroid	Antiallergy	Green
+hydroxyzine HCL	Atarax	H1 antagonist	Antiallergy	Green
+azelastine HCl	Astelin	H1 antagonist	Antiallergy	Green
+mometasone furoate monohydrate	Nasonex	Nasal corticosteroid	Antiallergy	Green
+olopatadine HCl	Patanol, Pataday	H1 antagonist, ophth.	Antiallergy	Green
+betaxolol	Betoptic	B Blockers, ophth	Glaucoma	Green
+pilocarpine	Isopto Carpine	Miotic, ophth.	Glaucoma	Green
+desloratidine	Clarinex	Antihistamine	Antiallergy	Green
+fexofenadine	Allegra	Antihistamine	Antiallergy	Green
+loratadine	Claritin	Antihistamine	Antiallergy	Green
+cetirizine	Zyrtec	Antihistamine	Antiallergy	Green
+chlorpheniramine	Chlor-Trimeton	Antihistamine	Antiallergy	Green
+diphenhydramine	Benadryl	Antihistamine	Antiallergy	Green
+hydroxyzine 	Atarax, Vistaril	Antihistamine	Antiallergy	Green
+levocetrizine	Xyzal	Antihistamine	Antiallergy	Green
+meclizine	Antivert	Antihistamine	Motion sickness	Green
+guaifenesin	Mucinex, Robitussin	Antitussive, expectorant	Cough suppression, expectorant	Green
+latanoprost	Zalatan	Prostaglandin, eye	Glaucoma	Green
+pseudoephedrine	Sudafed, Triaminic	Decongestant	Decongestant	Green
+oxycodone HCl	OxyContin, Roxicodone	Opioid 	Analgesia	Pink
+morphine sulfate	MS Contin	Opioid	Analgesia	Pink
+fentanyl	Duragesic	Opioid	Analgesia	Pink
+methadone	NULL	Opioid	Analgesia	Pink
+hydromorphone HCl	Dilaudid, Exalgo	Opioid	Analgesia	Pink
+hydrocodone + acetaminophen	Lortab, Vicodin, Lorcet, Norco	Opioid	Analgesia combo	Pink
+tylenol + codiene	NULL	Opioid	Analgesia combo	Pink
+tramadol HCl	Ultram	Opioid	Analgesia	Pink
+meperidine	Demerol	Opioid	Analgesia	Pink
+oxycodone + acetominophen	Percocet, Oxycocet, Endocet	Opioid	Analgesia	Pink
+oxycodone + acetylsalicylic acid	Percodan	Opioid	Analgesia	Pink
+naloxone	Narcan, Evzio	Opioid antagonist	NULL	Pink
+metformin HCl	Glucophage	Biguanide	Antidiabetic	Purple
+sitaglipitin phosphate	Januvia	DPP IV Inhibitor	Antidiabetic	Purple
+glipizide	Glucotrol	Sulfonylurea	Antidiabetic	Purple
+glyburide	Micronase, DiaBeta	Sulfonylurea	Antidiabetic	Purple
+glimepiride	Amaryl	Sulfonylurea	Antidiabetic	Purple
+pioglitazone HCl	Actos	Thiazolidinedione	Antidiabetic	Purple
+insulin lispro	Humalog	Rapid insulin	Antidiabetic	Purple
+insulin aspart	Novolog	Rapid insulin	Antidiabetic	Purple
+insulin glargine	Lantus	Long insulin	Antidiabetic	Purple
+insulin detemir	Levemir	Intermediate to long insulin	Antidiabetic	Purple
+dexamethasone	DexPak	corticosteroid	Immune suppression	Purple
+methylprednisolone	SoluMedrol, Medrol, Depo-Medrol	corticosteroid	Immune suppression	Purple
+prednisone	Deltasone	Corticosteroid	Immune suppression	Purple
+triamcinolone	Kenalog	Corticosteroid	Anti-inflammatory	Purple
+glyburide + metformin	Glucovance	sulfonylurea + glucophage	Anti-diabetic	Purple
+sitagliptin + metformin	Janumet	DPP IV inhibitor + glucophage	Anti-diabetic	Purple
+exenatide	Byetta	GLP 1 agonists	Anti-diabetic	Purple
+empagliflozin	Jariance	SGLT2 inhibitors	Antidiabetic	Purple
+glucagon	GlucaGen	Hypoglycemic tx	Tx of hypoglycemia	Purple
+levothyroxine	Synthroid	Thyroid agent	Supplemental thyroid hormone	Purple
+methimazole	Tapazole	Thyroid agent	Suppression of thyroid	Purple
+allopurinol	Aloprim, Zyloprim	Xanthine oxidase inhibitors	Gout	Maroon
+hydroxychloroquine	Plaquenil	DMARD	RA	Maroon
+diclofenac sodium	Voltaren Gel	NSAID	Topical anti-inflammatory	Maroon
+diclofenac sodium	Voltaren XR	NSAID	Anti-inflammatory	Maroon
+probenecid	probalan	Blocks reabsorption of urate	Gout	Maroon
+colchicine	Colcrys	Anti-inflammatory	Gout	Maroon
+ibuprofen	Motrin	NSAID	Anti-inflammatory	Maroon
+naproxen	Naproxyn	NSAID	Anti-inflammatory	Maroon
+celecoxib	Celebrex	NSAID	COX 2 inhibitor	Maroon
+methotrexate	Otrexup, Rheumatrex, MTX	DMARD	Antimetabolite antineoplastic agent	Maroon
+infliximab	Remicade	DMARD	TNF blockade	Maroon
+adalimumab	Humira	DMARD	TNF blockade	Maroon
+etanercept	Enbrel	DMARD	Biologic response modification	Maroon
+meloxicam	Mobic	NSAID	Anti-inflammatory	Maroon
+clindamycin	Cleocin T	Topical clindamycin	Acne	White
+clindamycin + benzoyl peroxide	DUAC	Topical 	Acne	White
+tretinoin	Retin-A	Topical	Acne	White
+fluorouracil	5FU	Topical	Superficial BCC	White
+silver sulfadiazine	Silvadene	Topical	Anti-bacterials	White
+prilocaine + lidocaine	EMLA	Topical 	Topical anesthetic	White
+enoxaparin	Lovenox	LMWH	Anticoagulant	Black
+warfarin	Coumadin, Jantoven	Anticoagulant	Anticoagulant	Black
+rivaroxaban	Xarelto	Anticoagulant	Factor Xa inhibitor	Black
+protamine	NULL	Hemostatic agent	Heparin antagonist	Black
