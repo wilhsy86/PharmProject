@@ -252,14 +252,22 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.get_value_btn:
-                String correct = "";
-                boolean selectedBrand = false;
-                boolean selectedPharm = false;
-                boolean selectedThera = false;
 
-                counter++;
-                String text = "Third Try! (Display Hint Here)";
-                if (counter == 3){
+                String checkAnswer = "Check Answer";
+                String nextQuestion = "Next Question";
+
+
+                if (checkAnswer.equals(getValueButton.getText())){
+                    //legend.setVisibility(View.VISIBLE);
+
+                    String correct = "";
+                    boolean selectedBrand = false;
+                    boolean selectedPharm = false;
+                    boolean selectedThera = false;
+
+                    counter++;
+                    String text = "Third Try! (Display Hint Here)";
+                    if (counter == 3){
 //            View view;
 //            TextView text1;
 //            Toast toast;
@@ -272,40 +280,41 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //            toast.show();
 //            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
 //            Toast.makeText(this, text , Toast.LENGTH_SHORT).show();
-                    counter = 0;
-                }
-                if (wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()).equals(brandAttr) ){
-                    selectedBrand = true;
-                }
-                if (wheelCenter.getData().get(wheelCenter.getCurrentItemPosition()).equals(pharmAttr) ){
-                    selectedPharm = true;
-                }
-                if (wheelRight.getData().get(wheelRight.getCurrentItemPosition()).equals(theraAttr)){
-                    selectedThera = true;
-                }
+                        counter = 0;
+                    }
+                    if (wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()).equals(brandAttr) ){
+                        selectedBrand = true;
+                    }
+                    if (wheelCenter.getData().get(wheelCenter.getCurrentItemPosition()).equals(pharmAttr) ){
+                        selectedPharm = true;
+                    }
+                    if (wheelRight.getData().get(wheelRight.getCurrentItemPosition()).equals(theraAttr)){
+                        selectedThera = true;
+                    }
 
-                if (selectedBrand && selectedPharm && selectedThera){
-                    resultButton.setText("Correct! Select next to proceed");
-                    counter = 0;
-                }
-                else if (selectedBrand && selectedPharm && !selectedThera){
-                    resultButton.setText("Incorrect! Check Therapeautic Use");
-                }
-                else if (selectedBrand && !selectedPharm && selectedThera){
-                    resultButton.setText("Incorrect! Check Pharmacological Class");
-                }
-                else if (selectedBrand && !selectedPharm && !selectedThera){
-                    resultButton.setText("Incorrect! Check Therapeautic Use & Pharmacological Class");
-                }
-                else if (!selectedBrand && selectedPharm && selectedThera){
-                    resultButton.setText("Incorrect! Check Brand Name");
-                }
-                else if (!selectedBrand && !selectedPharm && !selectedThera){
-                    resultButton.setText("Incorrect! Check Brand Name & Pharmacological Class & Therapeautic Use");
-                }
-                else {
-                    resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
-                }
+                    if (selectedBrand && selectedPharm && selectedThera){
+                        resultButton.setText("Correct! Select next to proceed");
+                        getValueButton.setText("Next Question");
+                        counter = 0;
+                    }
+                    else if (selectedBrand && selectedPharm && !selectedThera){
+                        resultButton.setText("Incorrect! Check Therapeautic Use");
+                    }
+                    else if (selectedBrand && !selectedPharm && selectedThera){
+                        resultButton.setText("Incorrect! Check Pharmacological Class");
+                    }
+                    else if (selectedBrand && !selectedPharm && !selectedThera){
+                        resultButton.setText("Incorrect! Check Therapeautic Use & Pharmacological Class");
+                    }
+                    else if (!selectedBrand && selectedPharm && selectedThera){
+                        resultButton.setText("Incorrect! Check Brand Name");
+                    }
+                    else if (!selectedBrand && !selectedPharm && !selectedThera){
+                        resultButton.setText("Incorrect! Check Brand Name & Pharmacological Class & Therapeautic Use");
+                    }
+                    else {
+                        resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
+                    }
 
 
 //                    Integer temp = wheelCenter.getCurrentItemPosition();
@@ -315,9 +324,26 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //                resultButton.setOnClickListener(this);
 //                resultButton.setText(wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()) + " , " + wheelCenter.getData().get(temp)
 //                        + " , " + wheelRight.getData().get(wheelRight.getCurrentItemPosition()) + " is " + correct);
-                resultButton.setVisibility(View.VISIBLE);
+                    resultButton.setVisibility(View.VISIBLE);
+                    break;
 
-                break;
+
+
+                }
+                else if (nextQuestion.equals(getValueButton.getText())) {
+                    resultButton.setVisibility(View.INVISIBLE);
+                    questionManager();
+                    getValueButton.setText("Check Answer");
+                    break;
+                }
+
+
+
+
+
+
+
+
 
             case R.id.result_btn:
                 //DO something
