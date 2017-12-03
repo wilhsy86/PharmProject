@@ -312,7 +312,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                         questionManager();
                         counter = 0;
                         getValueButton.setText("Check Answer");
-                        Toast.makeText(this, "We'll come back to this one later.. ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "We'll come back to that one later.. ", Toast.LENGTH_SHORT).show();
 
                         break;
                     }
