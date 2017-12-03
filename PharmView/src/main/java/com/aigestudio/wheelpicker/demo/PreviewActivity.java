@@ -1,29 +1,21 @@
 package com.aigestudio.wheelpicker.demo;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.aigestudio.wheelpicker.WheelPicker;
-
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 public class PreviewActivity extends Activity implements  WheelPicker.OnItemSelectedListener ,   View.OnClickListener {
@@ -31,7 +23,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private WheelPicker wheelLeft;
     private WheelPicker wheelCenter;
     private WheelPicker wheelRight;
-
+    private  int counter = 0;
     private int getValueButtonItemIndex;
     private Button getValueButton;
     private Button resultButton;
@@ -46,20 +38,10 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private String colorAttr;
     private boolean[] used = new boolean[304];
     private int randomNum;
-
-
-
     private ArrayList<String> drugList = new ArrayList<String>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        try {
-//            //new QuestionManager();
-//            Log.i(TAG, "Question Manager initiated!!!!!!!!!!!!");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_preview);
         genericName = (TextView) findViewById(R.id.generic_name);
@@ -86,72 +68,17 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
                 "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
 
-        {
-//            try {
-//                new QuestionManager();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-        }
-
         getValueButton = (Button) findViewById(R.id.get_value_btn);
         getValueButton.setOnClickListener(this);
         getValueButton.setText("Check Answer");
 
         drugList = getDrugs();
         questionManager();
-
-
-
-//        AssetManager assetManager = getAssets();
-//        // To load text file
-//        InputStream input;
-//        try {
-//            input = assetManager.open("drugs.txt");
-//            reader = new BufferedReader(new InputStreamReader(input));
-//            while (input != null){
-//                line = reader.readLine();
-//                System.out.println(line);
-////            int size = input.available();
-////            byte[] buffer = new byte[size];
-////            input.read(buffer);
-////            input.close();
-//
-//                // byte buffer into a string
-//                String text = new String(line);
-//            }
-//
-//
-//            //genericName.setText(text);
-//        } catch (IOException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-
-
-
-
     }
 
-    private void showLegendButton() {
-        new Thread(new Runnable(){
-            public void run(){
-                try {
-                    Thread.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                legend.setVisibility(View.VISIBLE);
-            }
-        }).run();
-
-            //t.setVisibility(View.INVISIBLE);
-    }
 
     public ArrayList<String> getDrugs(){
         ArrayList<String> drugList = new ArrayList<String>();
-        String questionGeneric = "";
-
         try {
             AssetManager assetManager = getAssets();
             // To load text file
@@ -162,7 +89,6 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 InputStreamReader inputreader = new InputStreamReader(input);
                 BufferedReader reader = new BufferedReader(inputreader);
                 String line;
-
                 do {
                     line = reader.readLine();
                     if (line != null){
@@ -177,25 +103,16 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
             }
             System.out.println("!!!!!!!!!!!!!!!!!!!Drug List Size is: " + drugList.size());
-            //System.out.println(drugList.get(303));
-            //genericName.setText(drugList.get(150));
-//            for (String S : drugList ) {
-//                //System.out.println(S);
-//
-//            }
+
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         return drugList;
     }
 
     public void questionManager(){
         genericName.setTextColor(Color.BLACK);
-
-        //System.out.println("WWWWWWWWWRRRRRRRRRRR " + drugList.get(303));
-
 
         Random rand = new Random();
         randomNum = rand.nextInt((drugList.size() - 0) + 1) + 0;
@@ -217,14 +134,11 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         }
     }
 
-    public void checkAnswer(){
-
-    }
-
     private void getSpinnerValue() {
         getValueButtonItemIndex = (int) (Math.random() * wheelCenter.getData().size());
     }
-    int counter = 0;
+
+
     @Override
     public void onItemSelected(WheelPicker picker, Object data, int position) {
         resultButton.setVisibility(View.INVISIBLE);
@@ -249,15 +163,12 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.get_value_btn:
-
                 String checkAnswer = "Check Answer";
                 String nextQuestion = "Next Question";
-
 
                 if (checkAnswer.equals(getValueButton.getText())){
                     //legend.setVisibility(View.VISIBLE);
 
-                    String correct = "";
                     boolean selectedBrand = false;
                     boolean selectedPharm = false;
                     boolean selectedThera = false;
@@ -378,8 +289,6 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
             case R.id.show_legend_btn:
                 String showLegend = "Show Legend";
                 String hideLegend = "Hide Legend";
-                String legendText = showLegendButton.getText().toString();
-
 
                 if (showLegend.equals(showLegendButton.getText())){
                     legend.setVisibility(View.VISIBLE);
