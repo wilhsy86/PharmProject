@@ -92,7 +92,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
         getValueButton = (Button) findViewById(R.id.get_value_btn);
         getValueButton.setOnClickListener(this);
-        getValueButton.setText("Selected Value is");
+        getValueButton.setText("Check Answer");
 
         drugList = getDrugs();
         questionManager();
@@ -201,14 +201,14 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
             System.out.println("!!!!!!!!!!!!!!!! " + temp);
 
             String[] columns = temp.split("\t");
-            String generic = columns[0];
-            String brand = columns[1];
-            String pharma = columns[2];
-            String thera = columns[3];
-            String color = columns[4];
+            String genericAttr = columns[0];
+            brandAttr = columns[1];
+            pharmAttr = columns[2];
+            theraAttr = columns[3];
+            colorAttr = columns[4];
 
-            System.out.println(" Values are " + generic + "  " + brand + "  " + pharma + "  " + thera + "  " + color);
-            genericName.setText(generic);
+            System.out.println(" Values are " + genericAttr + "  " + brandAttr + "  " + pharmAttr + "  " + theraAttr + "  " + colorAttr);
+            genericName.setText(genericAttr);
         }
     }
 
@@ -252,6 +252,10 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.get_value_btn:
+                String correct = "";
+                boolean selectedBrand = false;
+                boolean selectedPharm = false;
+                boolean selectedThera = false;
 
                 counter++;
                 String text = "Third Try! (Display Hint Here)";
@@ -270,14 +274,49 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //            Toast.makeText(this, text , Toast.LENGTH_SHORT).show();
                     counter = 0;
                 }
-                Integer temp = wheelCenter.getCurrentItemPosition();
-                getSpinnerValue();
-                resultButton = (Button) findViewById(R.id.result_btn);
-                getSpinnerValue();
-                resultButton.setOnClickListener(this);
-                resultButton.setText("Selected Values are " + wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()) + " , " + wheelCenter.getData().get(temp)
-                        + " , " + wheelRight.getData().get(wheelRight.getCurrentItemPosition()));
+                if (wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()).equals(brandAttr) ){
+                    selectedBrand = true;
+                }
+                if (wheelCenter.getData().get(wheelCenter.getCurrentItemPosition()).equals(pharmAttr) ){
+                    selectedPharm = true;
+                }
+                if (wheelRight.getData().get(wheelRight.getCurrentItemPosition()).equals(theraAttr)){
+                    selectedThera = true;
+                }
+
+                if (selectedBrand && selectedPharm && selectedThera){
+                    resultButton.setText("Correct! Select next to proceed");
+                    counter = 0;
+                }
+                else if (selectedBrand && selectedPharm && !selectedThera){
+                    resultButton.setText("Incorrect! Check Therapeautic Use");
+                }
+                else if (selectedBrand && !selectedPharm && selectedThera){
+                    resultButton.setText("Incorrect! Check Pharmacological Class");
+                }
+                else if (selectedBrand && !selectedPharm && !selectedThera){
+                    resultButton.setText("Incorrect! Check Therapeautic Use & Pharmacological Class");
+                }
+                else if (!selectedBrand && selectedPharm && selectedThera){
+                    resultButton.setText("Incorrect! Check Brand Name");
+                }
+                else if (!selectedBrand && !selectedPharm && !selectedThera){
+                    resultButton.setText("Incorrect! Check Brand Name & Pharmacological Class & Therapeautic Use");
+                }
+                else {
+                    resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
+                }
+
+
+//                    Integer temp = wheelCenter.getCurrentItemPosition();
+//                getSpinnerValue();
+//                resultButton = (Button) findViewById(R.id.result_btn);
+//                getSpinnerValue();
+//                resultButton.setOnClickListener(this);
+//                resultButton.setText(wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()) + " , " + wheelCenter.getData().get(temp)
+//                        + " , " + wheelRight.getData().get(wheelRight.getCurrentItemPosition()) + " is " + correct);
                 resultButton.setVisibility(View.VISIBLE);
+
                 break;
 
             case R.id.result_btn:
