@@ -29,6 +29,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private Button resultButton;
     private Button showLegendButton;
     private Button skipQuestionButton;
+    private Button showAnswerButton;
     private TextView legend;
     private TextView genericName;
     private String genericAttr;
@@ -44,33 +45,40 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_preview);
-        genericName = (TextView) findViewById(R.id.generic_name);
+
         wheelLeft = (WheelPicker) findViewById(R.id.main_wheel_left);
         wheelLeft.setOnItemSelectedListener(this);
         wheelCenter = (WheelPicker) findViewById(R.id.main_wheel_center);
         wheelCenter.setOnItemSelectedListener(this);
         wheelRight = (WheelPicker) findViewById(R.id.main_wheel_right);
         wheelRight.setOnItemSelectedListener(this);
-        getValueButton = (Button) findViewById(R.id.get_value_btn);
-        resultButton = (Button) findViewById(R.id.result_btn);
+
         showLegendButton = (Button) findViewById(R.id.show_legend_btn);
         showLegendButton.setOnClickListener(this);
+
+        showAnswerButton = (Button) findViewById(R.id.show_answer_btn);
+        showAnswerButton.setOnClickListener(this);
+
+        getValueButton = (Button) findViewById(R.id.get_value_btn);
         getValueButton.setOnClickListener(this);
         getValueButton.setText("Check Answer");
+
         skipQuestionButton = (Button) findViewById(R.id.skip_question_btn);
         skipQuestionButton.setOnClickListener(this);
+
+        resultButton = (Button) findViewById(R.id.result_btn);
         resultButton.setVisibility(View.INVISIBLE);
+        resultButton.setClickable(false);
+
+        genericName = (TextView) findViewById(R.id.generic_name);
+        genericName = (TextView) findViewById(R.id.generic_name);
+
         legend = (TextView) findViewById(R.id.Cardiovascular);
-        genericName = (TextView) findViewById(R.id.generic_name);//
         legend.setVisibility(View.INVISIBLE);
         legend.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
                 "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#800080\">" + "Endocrine   " + "</font>" +  "<br>" +
                 "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
                 "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
-
-        getValueButton = (Button) findViewById(R.id.get_value_btn);
-        getValueButton.setOnClickListener(this);
-        getValueButton.setText("Check Answer");
 
         drugList = getDrugs();
         questionManager();
@@ -113,6 +121,8 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
     public void questionManager(){
         genericName.setTextColor(Color.BLACK);
+        skipQuestionButton.setVisibility(View.VISIBLE);
+        showAnswerButton.setVisibility(View.VISIBLE);
 
         Random rand = new Random();
         randomNum = rand.nextInt((drugList.size() - 0) + 1) + 0;
@@ -276,6 +286,20 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
             case R.id.result_btn:
                 //DO something
+                break;
+
+            case R.id.show_answer_btn:
+
+                resultButton.setText("Solution- Brand: " + brandAttr + "   Pharm: " + pharmAttr + "   Thera: " + theraAttr);
+                resultButton.setVisibility(View.VISIBLE);
+                getValueButton.setText("Next Question");
+                skipQuestionButton.setVisibility(View.INVISIBLE);
+                showAnswerButton.setVisibility(View.INVISIBLE);
+                Toast.makeText(this, "Select \"Next Question when ready to proceed\". ", Toast.LENGTH_LONG).show();
+
+//                wheelCenter.setSelectedItemPosition(wheelCenter.getData().get(gotoBtnItemIndex));
+//                wheelRight.setSelectedItemPosition(wheelRight.getData().get(gotoBtnItemIndex));
+//                wheelLeft.setSelectedItemPosition(wheelLeft.getData().get(gotoBtnItemIndex));
                 break;
 
             case R.id.skip_question_btn:
