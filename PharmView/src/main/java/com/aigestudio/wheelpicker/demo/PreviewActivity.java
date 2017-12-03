@@ -3,6 +3,7 @@ package com.aigestudio.wheelpicker.demo;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
@@ -31,11 +32,11 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private WheelPicker wheelCenter;
     private WheelPicker wheelRight;
 
+    private int getValueButtonItemIndex;
     private Button getValueButton;
     private Button resultButton;
     private Button showLegendButton;
-    private Button nextQuestion;
-    private Integer getValueButtonItemIndex;
+    private Button skipQuestionButton;
     private TextView legend;
     private TextView genericName;
     private String genericAttr;
@@ -44,6 +45,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     private String theraAttr;
     private String colorAttr;
     private boolean[] used = new boolean[304];
+    private int randomNum;
 
 
 
@@ -73,12 +75,14 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         showLegendButton.setOnClickListener(this);
         getValueButton.setOnClickListener(this);
         getValueButton.setText("Check Answer");
+        skipQuestionButton = (Button) findViewById(R.id.skip_question_btn);
+        skipQuestionButton.setOnClickListener(this);
         resultButton.setVisibility(View.INVISIBLE);
         legend = (TextView) findViewById(R.id.Cardiovascular);
         genericName = (TextView) findViewById(R.id.generic_name);//
         legend.setVisibility(View.INVISIBLE);
         legend.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
-                "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#EE0000\">" + "Endocrine   " + "</font>" +  "<br>" +
+                "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#800080\">" + "Endocrine   " + "</font>" +  "<br>" +
                 "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
                 "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
 
@@ -188,12 +192,13 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     }
 
     public void questionManager(){
+        genericName.setTextColor(Color.BLACK);
 
         //System.out.println("WWWWWWWWWRRRRRRRRRRR " + drugList.get(303));
 
 
         Random rand = new Random();
-        int randomNum = rand.nextInt((drugList.size() - 0) + 1) + 0;
+        randomNum = rand.nextInt((drugList.size() - 0) + 1) + 0;
         System.out.println("Random Number is: " + randomNum);
         if (used[randomNum] == false){
             String temp = drugList.get(randomNum);
@@ -236,16 +241,8 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 text = "Right:";
                 break;
         }
-        Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
-
-
+        //Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
     }
-
-
-
-
-
-
 
 
     @Override
@@ -267,21 +264,59 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 
                     counter++;
                     String text = "Third Try! (Display Hint Here)";
-                    if (counter == 3){
-//            View view;
-//            TextView text1;
-//            Toast toast;
-//            toast.makeText(this, resId, Toast.LENGTH_SHORT);
-//            view = toast.getView();
-//            text1 = (TextView) view.findViewById(android.R.id.message);
-//            text1.setTextColor(getResources().getColor(R.color.black));
-//            text1.setShadowLayer(0,0,0,0);
-//            view.setBackgroundResource(R.color.white);
-//            toast.show();
-//            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
-//            Toast.makeText(this, text , Toast.LENGTH_SHORT).show();
-                        counter = 0;
+                    if (counter == 3) {
+                        if (colorAttr.equals("Red")) {
+                            genericName.setTextColor(Color.parseColor("#EE0000"));
+                        }
+                        else if (colorAttr.equals("Lime")) {
+                            genericName.setTextColor(Color.parseColor("#00FF00"));
+                        }
+                        else if (colorAttr.equals("Orange")) {
+                            genericName.setTextColor(Color.parseColor("#FFA500"));
+                        }
+                        else if (colorAttr.equals("Brown")) {
+                            genericName.setTextColor(Color.parseColor("#A52A2A"));
+                        }
+                        else if (colorAttr.equals("Blue")) {
+                            genericName.setTextColor(Color.parseColor("#0000FF"));
+                        }
+                        else if (colorAttr.equals("Grey")) {
+                            genericName.setTextColor(Color.parseColor("#808080"));
+                        }
+                        else if (colorAttr.equals("Yellow")) {
+                            genericName.setTextColor(Color.parseColor("#ffff00"));
+                        }
+                        else if (colorAttr.equals("Green")) {
+                            genericName.setTextColor(Color.parseColor("#008000"));
+                        }
+                        else if (colorAttr.equals("Pink")) {
+                            genericName.setTextColor(Color.parseColor("#FFC0CB"));
+                        }
+                        else if (colorAttr.equals("Purple")) {
+                            genericName.setTextColor(Color.parseColor("#800080"));
+                        }
+                        else if (colorAttr.equals("Maroon")) {
+                            genericName.setTextColor(Color.parseColor("#800000"));
+                        }
+                        else if (colorAttr.equals("White")) {
+                            genericName.setTextColor(Color.parseColor("#FFFFFF"));
+                        }
+                        else if (colorAttr.equals("Black")) {
+                            genericName.setTextColor(Color.BLACK);
+                        }
+                        Toast.makeText(this, "Hint: Color = Class", Toast.LENGTH_SHORT).show();
                     }
+
+                    if ( counter >= 5){
+                        resultButton.setVisibility(View.INVISIBLE);
+                        questionManager();
+                        counter = 0;
+                        getValueButton.setText("Check Answer");
+                        Toast.makeText(this, "We'll come back to this one later.. ", Toast.LENGTH_SHORT).show();
+
+                        break;
+                    }
+
                     if (wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()).equals(brandAttr) ){
                         selectedBrand = true;
                     }
@@ -296,6 +331,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                         resultButton.setText("Correct! Select next to proceed");
                         getValueButton.setText("Next Question");
                         counter = 0;
+                        used[randomNum] = true;
                     }
                     else if (selectedBrand && selectedPharm && !selectedThera){
                         resultButton.setText("Incorrect! Check Therapeautic Use");
@@ -315,38 +351,27 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                     else {
                         resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
                     }
-
-
-//                    Integer temp = wheelCenter.getCurrentItemPosition();
-//                getSpinnerValue();
-//                resultButton = (Button) findViewById(R.id.result_btn);
-//                getSpinnerValue();
-//                resultButton.setOnClickListener(this);
-//                resultButton.setText(wheelLeft.getData().get(wheelLeft.getCurrentItemPosition()) + " , " + wheelCenter.getData().get(temp)
-//                        + " , " + wheelRight.getData().get(wheelRight.getCurrentItemPosition()) + " is " + correct);
                     resultButton.setVisibility(View.VISIBLE);
                     break;
-
-
-
                 }
                 else if (nextQuestion.equals(getValueButton.getText())) {
                     resultButton.setVisibility(View.INVISIBLE);
                     questionManager();
+                    used[randomNum] = false;
+                    counter = 0;
                     getValueButton.setText("Check Answer");
                     break;
                 }
 
-
-
-
-
-
-
-
-
             case R.id.result_btn:
                 //DO something
+                break;
+
+            case R.id.skip_question_btn:
+                resultButton.setVisibility(View.INVISIBLE);
+                questionManager();
+                used[randomNum] = false;
+                counter = 0;
                 break;
 
 
@@ -364,20 +389,6 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                     legend.setVisibility(View.INVISIBLE);
                     showLegendButton.setText("Show Legend");
                 }
-
-//                new Thread(new Runnable(){
-//                    public void run(){
-//                        try {
-//                            Thread.sleep(5000);
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
-//                        }
-//                        t.setVisibility(View.INVISIBLE);
-//                    }
-//                }).run();
-
-                    //showLegendButton();
-                    //t.setVisibility(View.INVISIBLE);
                 break;
         }
     }

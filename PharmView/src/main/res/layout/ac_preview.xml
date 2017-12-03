@@ -130,4 +130,26 @@
 
 
     </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button android:id="@+id/skip_question_btn"
+            android:text="Skip Question"
+            android:paddingRight="20px"
+            android:textColor="#536D8A"
+            android:textSize="20sp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"/>
+
+
+    </LinearLayout>
 </LinearLayout>
