@@ -136,7 +136,7 @@ topiramate	Topamax	Anticonvulsant	Antiepileptic	Orange
 lamotrigine	Lamictal	Anticonvulsant	Antiepileptic	Orange
 phenytoin sodium	Dilantin	Anticonvulsant	Antiepileptic	Orange
 primidone	Mysoline	Barbituate	Antiepileptic	Orange
-ropinirole HCl	Requip	Neurologic	AntiParkinson agent, dopamine agonist	Orange
+ropinirole HCl	Requip	Neurologic	AntiParkinson agent, Dopamine agonist	Orange
 pramipexole 	Mirapex	Neurologic	AntiParkinson agent, Dopamine agonist 	Orange
 carbidopa + levodopa	Sinemet	Neurologic	Decarboxylase inhibitor + dopamine precursor, AntiParkinson	Orange
 benztropine mesylate	Cogentin	Neurologic	AntiParkinson agent	Orange
