@@ -55,7 +55,7 @@
                   android:gravity="center"
                   android:orientation="horizontal">
 
-    <com.aigestudio.wheelpicker.WheelPicker
+    <com.wilhsy.spinner.WheelPicker
         android:id="@+id/main_wheel_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         aigestudio:wheel_item_text_size="24sp"
         aigestudio:wheel_selected_item_text_color="#536D8A" />
 
-    <com.aigestudio.wheelpicker.WheelPicker
+    <com.wilhsy.spinner.WheelPicker
         android:id="@+id/main_wheel_center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
         aigestudio:wheel_item_text_size="24sp"
         aigestudio:wheel_selected_item_text_color="#536D8A" />
 
-    <com.aigestudio.wheelpicker.WheelPicker
+    <com.wilhsy.spinner.WheelPicker
         android:id="@+id/main_wheel_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

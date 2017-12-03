@@ -1,2 +1,2 @@
-include ':PharmView', ':WheelPicker'
+include ':PharmView', ':Spinner'
 

@@ -1,4 +1,4 @@
-package com.aigestudio.wheelpicker;
+package com.wilhsy.spinner;
 import android.app.Application;
 
 /**

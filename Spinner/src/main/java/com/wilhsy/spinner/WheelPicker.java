@@ -1,4 +1,4 @@
-package com.aigestudio.wheelpicker;
+package com.wilhsy.spinner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -19,7 +19,6 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Scroller;
-import com.aigestudio.wheelpicker.myApp;
 
 import java.util.Arrays;
 import java.util.List;

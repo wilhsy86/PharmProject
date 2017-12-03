@@ -1,4 +1,4 @@
-package com.aigestudio.wheelpicker.demo;
+package com.wilhsy.spinner.pharm;
 
 import android.app.Activity;
 import android.content.res.AssetManager;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.aigestudio.wheelpicker.WheelPicker;
+import com.wilhsy.spinner.WheelPicker;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -44,36 +44,36 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.ac_preview);
+        setContentView(com.wilhsy.spinner.pharm.R.layout.ac_preview);
 
-        wheelLeft = (WheelPicker) findViewById(R.id.main_wheel_left);
+        wheelLeft = (WheelPicker) findViewById(com.wilhsy.spinner.pharm.R.id.main_wheel_left);
         wheelLeft.setOnItemSelectedListener(this);
-        wheelCenter = (WheelPicker) findViewById(R.id.main_wheel_center);
+        wheelCenter = (WheelPicker) findViewById(com.wilhsy.spinner.pharm.R.id.main_wheel_center);
         wheelCenter.setOnItemSelectedListener(this);
-        wheelRight = (WheelPicker) findViewById(R.id.main_wheel_right);
+        wheelRight = (WheelPicker) findViewById(com.wilhsy.spinner.pharm.R.id.main_wheel_right);
         wheelRight.setOnItemSelectedListener(this);
 
-        showLegendButton = (Button) findViewById(R.id.show_legend_btn);
+        showLegendButton = (Button) findViewById(com.wilhsy.spinner.pharm.R.id.show_legend_btn);
         showLegendButton.setOnClickListener(this);
 
-        showAnswerButton = (Button) findViewById(R.id.show_answer_btn);
+        showAnswerButton = (Button) findViewById(com.wilhsy.spinner.pharm.R.id.show_answer_btn);
         showAnswerButton.setOnClickListener(this);
 
-        getValueButton = (Button) findViewById(R.id.get_value_btn);
+        getValueButton = (Button) findViewById(com.wilhsy.spinner.pharm.R.id.get_value_btn);
         getValueButton.setOnClickListener(this);
         getValueButton.setText("Check Answer");
 
-        skipQuestionButton = (Button) findViewById(R.id.skip_question_btn);
+        skipQuestionButton = (Button) findViewById(com.wilhsy.spinner.pharm.R.id.skip_question_btn);
         skipQuestionButton.setOnClickListener(this);
 
-        resultButton = (Button) findViewById(R.id.result_btn);
+        resultButton = (Button) findViewById(com.wilhsy.spinner.pharm.R.id.result_btn);
         resultButton.setVisibility(View.INVISIBLE);
         resultButton.setClickable(false);
 
-        genericName = (TextView) findViewById(R.id.generic_name);
-        genericName = (TextView) findViewById(R.id.generic_name);
+        genericName = (TextView) findViewById(com.wilhsy.spinner.pharm.R.id.generic_name);
+        genericName = (TextView) findViewById(com.wilhsy.spinner.pharm.R.id.generic_name);
 
-        legend = (TextView) findViewById(R.id.Cardiovascular);
+        legend = (TextView) findViewById(com.wilhsy.spinner.pharm.R.id.Cardiovascular);
         legend.setVisibility(View.INVISIBLE);
         legend.setText(Html.fromHtml("<font color=\"#EE0000\">" + "Cardiovascular   " + "</font>" + "<font color=\"#0000FF\">" + "Pulmonary   " + "</font>" + "<font color=\"#ffff00\">" + "Renal   " + "</font>" +
                 "<font color=\"#A52A2A\">" + "Gastrointestinal   " + "</font>" + "<font color=\"#FFFFFF\">" + "Skin   " + "</font>" + "<font color=\"#800080\">" + "Endocrine   " + "</font>" +  "<br>" +
@@ -155,13 +155,13 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         //genericName.setText("New Question");
         String text = "";
         switch (picker.getId()) {
-            case R.id.main_wheel_left:
+            case com.wilhsy.spinner.pharm.R.id.main_wheel_left:
                 text = "Left:";
                 break;
-            case R.id.main_wheel_center:
+            case com.wilhsy.spinner.pharm.R.id.main_wheel_center:
                 text = "Center:";
                 break;
-            case R.id.main_wheel_right:
+            case com.wilhsy.spinner.pharm.R.id.main_wheel_right:
                 text = "Right:";
                 break;
         }
@@ -172,7 +172,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
     @Override
     public void onClick(View view) {
         switch(view.getId()){
-            case R.id.get_value_btn:
+            case com.wilhsy.spinner.pharm.R.id.get_value_btn:
                 String checkAnswer = "Check Answer";
                 String nextQuestion = "Next Question";
 
@@ -267,7 +267,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                         resultButton.setText("Incorrect! Check Brand Name");
                     }
                     else if (!selectedBrand && !selectedPharm && !selectedThera){
-                        resultButton.setText("Incorrect! Check Brand Name & Pharmacological Class & Therapeautic Use");
+                        resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
                     }
                     else {
                         resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
@@ -284,11 +284,11 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                     break;
                 }
 
-            case R.id.result_btn:
+            case com.wilhsy.spinner.pharm.R.id.result_btn:
                 //DO something
                 break;
 
-            case R.id.show_answer_btn:
+            case com.wilhsy.spinner.pharm.R.id.show_answer_btn:
 
                 resultButton.setText("Solution- Brand: " + brandAttr + "   Pharm: " + pharmAttr + "   Thera: " + theraAttr);
                 resultButton.setVisibility(View.VISIBLE);
@@ -302,7 +302,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
 //                wheelLeft.setSelectedItemPosition(wheelLeft.getData().get(gotoBtnItemIndex));
                 break;
 
-            case R.id.skip_question_btn:
+            case com.wilhsy.spinner.pharm.R.id.skip_question_btn:
                 resultButton.setVisibility(View.INVISIBLE);
                 questionManager();
                 used[randomNum] = false;
@@ -310,7 +310,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 break;
 
 
-            case R.id.show_legend_btn:
+            case com.wilhsy.spinner.pharm.R.id.show_legend_btn:
                 String showLegend = "Show Legend";
                 String hideLegend = "Hide Legend";
 

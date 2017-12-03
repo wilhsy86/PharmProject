@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PharmView/Demo.iml" filepath="$PROJECT_DIR$/PharmView/Demo.iml" />
+      <module fileurl="file://C:\Users\WiLhS\AndroidStudioProjects\ProjectPharm\PharmView\Demo.iml" filepath="C:\Users\WiLhS\AndroidStudioProjects\ProjectPharm\PharmView\Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PharmView/PharmView.iml" filepath="$PROJECT_DIR$/PharmView/PharmView.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProjectPharm.iml" filepath="$PROJECT_DIR$/ProjectPharm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WheelPicker/WheelPicker.iml" filepath="$PROJECT_DIR$/WheelPicker/WheelPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spinner/Spinner.iml" filepath="$PROJECT_DIR$/Spinner/Spinner.iml" />
+      <module fileurl="file://C:\Users\WiLhS\AndroidStudioProjects\ProjectPharm\Spinner\WheelPicker.iml" filepath="C:\Users\WiLhS\AndroidStudioProjects\ProjectPharm\Spinner\WheelPicker.iml" />
     </modules>
   </component>
 </project>

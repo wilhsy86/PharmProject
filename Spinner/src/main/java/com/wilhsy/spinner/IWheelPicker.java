@@ -1,4 +1,4 @@
-package com.aigestudio.wheelpicker;
+package com.wilhsy.spinner;
 
 import android.graphics.Typeface;
 
@@ -136,7 +136,7 @@ public interface IWheelPicker {
      *
      *
      * @param listener
-     * @see com.aigestudio.wheelpicker.WheelPicker.OnWheelChangeListener
+     * @see com.wilhsy.spinner.WheelPicker.OnWheelChangeListener
      */
     void setOnWheelChangeListener(WheelPicker.OnWheelChangeListener listener);
 
