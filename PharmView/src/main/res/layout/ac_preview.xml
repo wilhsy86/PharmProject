@@ -31,9 +31,14 @@
             android:id="@+id/generic_name"
             android:layout_width="800px"
             android:gravity="center"
+            android:background="@drawable/buttonshape"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="diphenoxylate HCl + atropine sulfate"/>
+            android:text="diphenoxylate HCl + atropine sulfate"
+
+
+
+            />
 
         <Button android:id="@+id/show_answer_btn"
             android:text="Show Answer"

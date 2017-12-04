@@ -125,7 +125,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
         showAnswerButton.setVisibility(View.VISIBLE);
 
         Random rand = new Random();
-        randomNum = rand.nextInt((drugList.size() - 0) + 1) + 0;
+        randomNum = rand.nextInt(drugList.size());
         System.out.println("Random Number is: " + randomNum);
         if (used[randomNum] == false){
             String temp = drugList.get(randomNum);
