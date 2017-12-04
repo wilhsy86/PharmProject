@@ -7,7 +7,7 @@
 //import android.widget.Toast;
 //import com.wilhsy.spinner.*;
 //
-////C:\Users\WiLhS\AndroidStudioProjects\ProjectPharm\PharmApp\src\main\java\com\aigestudio\wheelpicker\demo\PreviewActivity.java
+//C:\Users\WiLhS\AndroidStudioProjects\ProjectPharm\PharmApp\src\main\java\com\aigestudio\wheelpicker\demo\PreviewActivity.java
 //
 //public static class PreviewActivity extends Activity implements  WheelPicker.OnItemSelectedListener ,   View.OnClickListener {
 //

@@ -40,7 +40,7 @@ furosemide	Lasix	Loop diuretic	Antihypertensive	Red
 bumetanide	Bumex	Loop diuretic	Antihypertensive	Red
 torsemide	Demadex	Loop diuretic	Antihypertensive	Red
 hydrochlorothiazide (HCTZ)	Microzide	Thiazide diuretic	Antihypertensive	Red
-spironolactone	Aldactone	Potassium sparing diuretic, selective aldosterone blocker	Antihypertensive	Red
+spironolactone	Aldactone	K sparing diuretic, aldosterone block	Antihypertensive	Red
 triamterene + HCTZ	Dyazide, Maxzide	Potassium sparing + thiazide diuretic	Antihypertensive	Red
 digoxin	Lanoxin, Digitek	Iontropic agent	Antiarrhythmic	Red
 clopidogrel	Plavix	Antiplatelet	Clot inhibition	Red
@@ -138,7 +138,7 @@ phenytoin sodium	Dilantin	Anticonvulsant	Antiepileptic	Orange
 primidone	Mysoline	Barbituate	Antiepileptic	Orange
 ropinirole HCl	Requip	Neurologic	AntiParkinson agent, dopamine agonist	Orange
 pramipexole 	Mirapex	Neurologic	AntiParkinson agent, Dopamine agonist 	Orange
-carbidopa + levodopa	Sinemet	Neurologic	Decarboxylase inhibitor + dopamine precursor, AntiParkinson	Orange
+carbidopa + levodopa	Sinemet	Neurologic	Decarboxylase inhibit., dopamine precursor	Orange
 benztropine mesylate	Cogentin	Neurologic	AntiParkinson agent	Orange
 rivastigmine	Exelon	Neurologic	Cholinesterase inhibitor, AD agent	Orange
 phenobarbital	NULL	Anticonvulsant	Antiepileptic	Orange

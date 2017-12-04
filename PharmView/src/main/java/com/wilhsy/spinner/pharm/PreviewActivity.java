@@ -295,7 +295,7 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                 getValueButton.setText("Next Question");
                 skipQuestionButton.setVisibility(View.INVISIBLE);
                 showAnswerButton.setVisibility(View.INVISIBLE);
-                Toast.makeText(this, "Select \"Next Question when ready to proceed\". ", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "Select \"Next Question when ready to proceed\". ", Toast.LENGTH_LONG).show();
 
 //                wheelCenter.setSelectedItemPosition(wheelCenter.getData().get(gotoBtnItemIndex));
 //                wheelRight.setSelectedItemPosition(wheelRight.getData().get(gotoBtnItemIndex));
