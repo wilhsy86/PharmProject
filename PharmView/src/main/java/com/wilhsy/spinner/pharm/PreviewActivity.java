@@ -254,24 +254,29 @@ public class PreviewActivity extends Activity implements  WheelPicker.OnItemSele
                         counter = 0;
                         used[randomNum] = true;
                     }
-                    else if (selectedBrand && selectedPharm && !selectedThera){
-                        resultButton.setText("Incorrect! Check Therapeautic Use");
-                    }
-                    else if (selectedBrand && !selectedPharm && selectedThera){
-                        resultButton.setText("Incorrect! Check Pharmacological Class");
-                    }
-                    else if (selectedBrand && !selectedPharm && !selectedThera){
-                        resultButton.setText("Incorrect! Check Therapeautic Use & Pharmacological Class");
-                    }
-                    else if (!selectedBrand && selectedPharm && selectedThera){
-                        resultButton.setText("Incorrect! Check Brand Name");
-                    }
-                    else if (!selectedBrand && !selectedPharm && !selectedThera){
-                        resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
-                    }
                     else {
-                        resultButton.setText("Incorrect! Check Brand Name , Pharmacological Class & Therapeautic Use");
+                        String text = "Incorrect! Check ";
+                        List<String>incorrectAttributes = new ArrayList<String>();
+                        
+                        if (!selectedThera) {
+                            incorrectAttributes.add("Therapeutic Use");
+                            
+                        }
+                        if (!selectedPharm) {
+                            incorrectAttributes.add("Pharmacological Class");
+                        }
+                        if (!selectedBrand){
+                            incorrectAttributes.add("Brand Name");
+                        }
+                        for (int s = 0; s < incorrectAttributes.size(); s++) {
+                            if (s >= 1 && s < incorrectAttributes.size() - 1) text = text + " , ";
+                            else if (s != 0) text = text + " & "
+                            text = text + incorrectAttributes.get(s);
+                        }
+                        resultButton.setText(text);
                     }
+    
+
                     resultButton.setVisibility(View.VISIBLE);
                     break;
                 }
