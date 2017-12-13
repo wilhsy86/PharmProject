@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_message">Select drug classes to include</string>
+    <string name="ear_nose_and_throat">Ear, Nose and Throat</string>
+    <string name="neurology">Neurology</string>
+    <string name="endocrine">Endocrine</string>
+    <string name="skin">Skin</string>
+    <string name="pain">Pain</string>
+    <string name="psyche">Psyche</string>
+    <string name="musculoskelatal">Musculoskelatal</string>
+    <string name="antibiotics">Antibiotics</string>
+    <string name="gastrointestinal">Gastrointestinal</string>
+    <string name="renal">Renal</string>
+    <string name="pulmonary">Pulmonary</string>
+    <string name="cardiovascular">Cardiovascular</string>
+    <string name="start_practice">Start Practice</string>
+    <string name="select_all">Select All</string>
+    <string name="clear_all">Clear All</string>
+
+
+</resources>
