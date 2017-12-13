@@ -25,8 +25,8 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
     private Button selectAll;
     private Button clearAll;
 
-    public static ArrayList<String> drugList = new ArrayList<String>();
-    private ArrayList<String> checkedItems = new ArrayList<String>();
+    public static ArrayList<String> drugList = new ArrayList<>();
+    private ArrayList<String> checkedItems = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(this.getResources().getColor(R.color.title_Bar));
         }
+
 
         chkClassCardio = (CheckBox) findViewById(R.id.cardiovascular);
         chkClassPulmonary = (CheckBox) findViewById(R.id.Pulmonary);
@@ -66,7 +67,7 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
     }
 
     public ArrayList<String> getDrugs(){
-        ArrayList<String> drugList = new ArrayList<String>();
+        ArrayList<String> drugList = new ArrayList<>();
         drugList.clear();
         try {
             AssetManager assetManager = getAssets();
