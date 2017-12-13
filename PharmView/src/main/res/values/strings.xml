@@ -16,6 +16,14 @@
     <string name="start_practice">Start Practice</string>
     <string name="select_all">Select All</string>
     <string name="clear_all">Clear All</string>
+    <string name="home">Home</string>
+    <string name="legend">   Legend   </string>
+    <string name="skip_question">Skip Question</string>
+    <string name="generic_question">Generic Question</string>
+    <string name="show_answer">Show Answer</string>
+    <string name="results">Results \'?\'</string>
+    <string name="show_legend">Show Legend</string>
+    <string name="check_answer">Check Answer</string>
 
 
 </resources>

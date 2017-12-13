@@ -2,7 +2,6 @@ package com.wilhsy.spinner.pharm;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
@@ -10,15 +9,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.wilhsy.spinner.WheelPicker;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 
 public class MainActivity extends Activity implements  WheelPicker.OnItemSelectedListener ,   View.OnClickListener {
     private static final String TAG = WheelPicker.class.getSimpleName();
@@ -89,43 +85,7 @@ public class MainActivity extends Activity implements  WheelPicker.OnItemSelecte
                 "<font color=\"#FFA500\">" + "Neurology   " + "</font>" + "<font color=\"#008000\">" + "Ear Nose &amp; Throat   " + "</font>" + "<font color=\"#FFC0CB\">" + "Pain   " + "</font>" +
                 "<font color=\"#808080\">" + "Psych   " + "</font>" + "<font color=\"#800000\">" + "Musculoskeletal   " + "</font>" + "<font color=\"#00FF00\">" + "Antibiotics   " + "</font>"));
 
-        //drugList = getDrugs();
         questionManager();
-    }
-
-
-    public ArrayList<String> getDrugs(){
-        ArrayList<String> drugList = new ArrayList<String>();
-        try {
-            AssetManager assetManager = getAssets();
-            // To load text file
-            InputStream input = assetManager.open("drugs.txt");
-
-            if (input != null){
-                //prepare file for reading
-                InputStreamReader inputreader = new InputStreamReader(input);
-                BufferedReader reader = new BufferedReader(inputreader);
-                String line;
-                do {
-                    line = reader.readLine();
-                    if (line != null){
-                        //System.out.println(line);
-                        drugList.add(line);
-                    }
-
-                    //questionGeneric = line;
-                } while (line != null);
-                inputreader.close();
-                reader.close();
-
-            }
-            System.out.println("!!!!!!!!!!!!!!!!!!!Drug List Size is: " + drugList.size());
-
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return drugList;
     }
 
     public void questionManager(){
@@ -176,7 +136,6 @@ public class MainActivity extends Activity implements  WheelPicker.OnItemSelecte
         }
         //Toast.makeText(this, text + String.valueOf(data), Toast.LENGTH_SHORT).show();
     }
-
 
     @Override
     public void onClick(View view) {

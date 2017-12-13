@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/Cardiovascular"
             android:gravity="center"
-            android:text="   Legend   "
+            android:text="@string/legend"
             android:layout_width="575dp"
             android:layout_height="wrap_content"
             android:textColor="#536D8A"
@@ -38,7 +38,7 @@
 
 
         <Button android:id="@+id/skip_question_btn"
-            android:text="Skip Question"
+            android:text="@string/skip_question"
             android:textColor="#536D8A"
             android:textSize="20sp"
             android:layout_width="150dp"
@@ -56,14 +56,14 @@
             android:background="@drawable/buttonshape"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="Generic Question"
+            android:text="@string/generic_question"
             android:shadowColor="#000000"
             android:shadowDx="1.5"
             android:shadowDy="1.5"
             android:shadowRadius="5"/>
 
         <Button android:id="@+id/show_answer_btn"
-            android:text="Show Answer"
+            android:text="@string/show_answer"
             android:textColor="#536D8A"
             android:textSize="20sp"
             android:layout_width="150dp"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10px"
             android:paddingRight="10px"
-            android:text="Results '?'"
+            android:text="@string/results"
             android:textColor="#536D8A"
             android:textSize="20sp"
             android:background="@drawable/buttonshape"
@@ -161,7 +161,7 @@
         android:layout_marginTop="10dp">
 
         <Button android:id="@+id/show_legend_btn"
-            android:text="Show Legend"
+            android:text="@string/show_legend"
             android:textColor="#536D8A"
             android:textSize="20sp"
             android:layout_width="150dp"
@@ -179,7 +179,7 @@
             android:textSize="20dp"/>
 
         <Button android:id="@+id/go_home_btn"
-            android:text="Home"
+            android:text="@string/home"
             android:textColor="#536D8A"
             android:textSize="20sp"
             android:layout_width="150dp"
@@ -197,7 +197,7 @@
             android:textSize="20dp"/>
 
         <Button android:id="@+id/get_value_btn"
-            android:text="Check Answer"
+            android:text="@string/check_answer"
             android:textColor="#536D8A"
             android:textSize="20sp"
             android:layout_width="150dp"

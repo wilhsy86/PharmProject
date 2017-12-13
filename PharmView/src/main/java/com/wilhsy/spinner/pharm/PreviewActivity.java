@@ -3,34 +3,19 @@ package com.wilhsy.spinner.pharm;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.wilhsy.spinner.WheelPicker;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Random;
-
 
 public class PreviewActivity extends Activity implements  View.OnClickListener {
-
-
-    private static final String TAG = WheelPicker.class.getSimpleName();
-    private WheelPicker wheelLeft;
-    private WheelPicker wheelCenter;
-    private WheelPicker wheelRight;
-    private  int counter = 0;
-    private int getValueButtonItemIndex;
-
 
     private CheckBox chkClassCardio, chkClassPulmonary, chkClassRenal, chkClassGastro, chkClassSkin, chkClassEndocrine, chkClassNeur, chkClassENT, chkClassPain, chkClassPsych, chkClassMS, chkClassAntiBiotic;
 
@@ -38,20 +23,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
     private Button selectAll;
     private Button clearAll;
 
-
-    private TextView instructions;
-    private TextView genericName;
-
-
-    private String genericAttr;
-    private String brandAttr;
-    private String pharmAttr;
-    private String theraAttr;
-    private String colorAttr;
-
-
-    private boolean[] used = new boolean[304];
-    private int randomNum;
     public static ArrayList<String> drugList = new ArrayList<String>();
     private ArrayList<String> checkedItems = new ArrayList<String>();
 
@@ -59,8 +30,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_preview);
-
-
 
         chkClassCardio = (CheckBox) findViewById(R.id.cardiovascular);
         chkClassPulmonary = (CheckBox) findViewById(R.id.Pulmonary);
@@ -75,7 +44,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
         chkClassMS = (CheckBox) findViewById(R.id.Musculoskelatal);
         chkClassAntiBiotic = (CheckBox) findViewById(R.id.Antibiotics);
 
-
         startPractice = (Button) findViewById(R.id.start_practice);
         startPractice.setOnClickListener(this);
 
@@ -85,7 +53,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
         clearAll = (Button) findViewById(R.id.clear_all);
         clearAll.setOnClickListener(this);
     }
-
 
     public ArrayList<String> getDrugs(){
         ArrayList<String> drugList = new ArrayList<String>();
@@ -119,7 +86,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
                 } while (line != null);
                 inputreader.close();
                 reader.close();
-
             }
             System.out.println("!!!!!!!!!!!!!!!!!!!Drug List Size is: " + drugList.size());
 
@@ -128,10 +94,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
             e.printStackTrace();
         }
         return drugList;
-    }
-
-    private void getSpinnerValue() {
-        getValueButtonItemIndex = (int) (Math.random() * wheelCenter.getData().size());
     }
 
     @Override
@@ -177,7 +139,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
                 if(chkClassAntiBiotic.isChecked()){
                     checkedItems.add("Lime");
                 }
-
                 if(checkedItems.size() > 0){
                     drugList = getDrugs();
 
@@ -187,10 +148,7 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
                 }
                 else {
                     Toast.makeText(this, "You must select at least one drug class!", Toast.LENGTH_LONG).show();
-
                 }
-
-
                 break;
 
 
@@ -223,16 +181,6 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
                 chkClassPulmonary.setChecked(true);
                 chkClassCardio.setChecked(true);
                 break;
-
-
         }
     }
-
-
-
-
-
-
-
-
 }
