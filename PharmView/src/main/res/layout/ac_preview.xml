@@ -10,15 +10,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingTop="20dp">
+        android:paddingTop="10dp">
 
         <TextView
             android:id="@+id/instructions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:padding="10dp"
-            android:shadowColor="#000000"
+            android:padding="7dp"
+            android:shadowColor="@color/black"
             android:shadowDx="1.5"
             android:shadowDy="1.5"
             android:shadowRadius="5"
@@ -207,11 +207,11 @@
 
         <Button
             android:id="@+id/select_all"
-            android:layout_width="200dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/select_all"
             android:background="@drawable/buttonshape"
-            android:padding="10dp"
+            android:padding="7dp"
             android:shadowColor="#000000"
             android:shadowDx="1.5"
             android:shadowDy="1.5"
@@ -220,12 +220,14 @@
             android:textSize="18sp"/>
 
         <Button
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:id="@+id/start_practice"
-            android:layout_width="200dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/start_practice"
             android:background="@drawable/buttonshape"
-            android:padding="10dp"
+            android:padding="7dp"
             android:shadowColor="#000000"
             android:shadowDx="1.5"
             android:shadowDy="1.5"
@@ -235,11 +237,11 @@
 
         <Button
             android:id="@+id/clear_all"
-            android:layout_width="200dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="@string/clear_all"
             android:background="@drawable/buttonshape"
-            android:padding="10dp"
+            android:padding="7dp"
             android:shadowColor="#000000"
             android:shadowDx="1.5"
             android:shadowDy="1.5"
