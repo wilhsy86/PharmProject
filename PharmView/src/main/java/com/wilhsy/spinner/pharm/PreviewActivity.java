@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.wilhsy.spinner.WheelPicker;
 
@@ -138,6 +139,8 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
         switch(view.getId()){
             case R.id.start_practice:
 
+                checkedItems.clear();
+
                 if(chkClassCardio.isChecked()){
                     checkedItems.add("Red");
                 }
@@ -174,11 +177,19 @@ public class PreviewActivity extends Activity implements  View.OnClickListener {
                 if(chkClassAntiBiotic.isChecked()){
                     checkedItems.add("Lime");
                 }
-                drugList = getDrugs();
 
-                Intent intent = new Intent(PreviewActivity.this, MainActivity.class);
-                intent.putStringArrayListExtra("drugList", drugList);
-                startActivity(intent);
+                if(checkedItems.size() > 0){
+                    drugList = getDrugs();
+
+                    Intent intent = new Intent(PreviewActivity.this, MainActivity.class);
+                    intent.putStringArrayListExtra("drugList", drugList);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(this, "You must select at least one drug class!", Toast.LENGTH_LONG).show();
+
+                }
+
 
                 break;
 
